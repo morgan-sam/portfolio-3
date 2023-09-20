@@ -4,6 +4,6 @@
 	import Subtitle from '$lib/components/Subtitle.svelte';
 </script>
 
-<Title>Sam Morgan</Title>
+<Title class="leading-[46px]">Sam Morgan</Title>
 <Subtitle>Fullstack developer</Subtitle>
 <Ball />

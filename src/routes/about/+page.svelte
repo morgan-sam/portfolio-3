@@ -5,5 +5,4 @@
 </script>
 
 <Title>About</Title>
-<Subtitle>Lorem ipsum</Subtitle>
 <Ball />
