@@ -4,4 +4,6 @@
 </script>
 
 <Navbar />
-<slot />
+<div class="font-calistoga flex flex-col items-center justify-center">
+	<slot />
+</div>
