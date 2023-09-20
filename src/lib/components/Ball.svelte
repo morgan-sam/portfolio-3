@@ -5,8 +5,7 @@
 
 <style>
 	.noise {
-		background: linear-gradient(20deg, rgb(61, 11, 11), transparent),
-			url(https://grainy-gradients.vercel.app/noise.svg);
+		background: linear-gradient(20deg, rgb(61, 11, 11), transparent), url('$lib/images/noise.svg');
 		filter: contrast(170%) brightness(1000%);
 	}
 

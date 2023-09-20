@@ -1,5 +1,5 @@
 <script>
-	import Ball from '$lib/Ball.svelte';
+	import Ball from '$lib/components/Ball.svelte';
 </script>
 
 <h1>Sam Morgan</h1>
