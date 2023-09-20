@@ -5,4 +5,3 @@
 </script>
 
 <Title>About</Title>
-<Ball />

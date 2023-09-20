@@ -5,4 +5,3 @@
 </script>
 
 <Title>Contact</Title>
-<Ball />
