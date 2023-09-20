@@ -1,7 +1,9 @@
 <script>
 	import Ball from '$lib/components/Ball.svelte';
+	import Title from '$lib/components/Title.svelte';
+	import Subtitle from '$lib/components/Subtitle.svelte';
 </script>
 
-<h1>Sam Morgan</h1>
-<h2>Fullstack developer</h2>
+<Title>Sam Morgan</Title>
+<Subtitle>Fullstack developer</Subtitle>
 <Ball />

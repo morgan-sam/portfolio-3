@@ -1,2 +1,9 @@
-<h1>Projects</h1>
-<p>Lorem ipsum</p>
+<script>
+	import Ball from '$lib/components/Ball.svelte';
+	import Title from '$lib/components/Title.svelte';
+	import Subtitle from '$lib/components/Subtitle.svelte';
+</script>
+
+<Title>Projects</Title>
+<Subtitle>Lorem ipsum</Subtitle>
+<Ball />
