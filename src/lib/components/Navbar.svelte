@@ -1,5 +1,5 @@
 <!-- Navbar.svelte -->
-<nav class="navbar">
+<nav class="navbar absolute">
 	<ul class="flex items-center justify-center">
 		<li class="mx-2"><a href="/">Home</a></li>
 		<li class="mx-2"><a href="/about">About</a></li>
