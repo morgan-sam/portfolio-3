@@ -93,7 +93,7 @@
 	</div>
 </div>
 
-<div class="fixed bottom-0 right-0">
+<div class="fixed bottom-0 right-0 hidden">
 	<table>
 		<tr>
 			<th>Parameter</th>
