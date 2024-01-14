@@ -34,6 +34,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/calistoga": "^5.0.12"
+		"@fontsource/calistoga": "^5.0.12",
+		"@simonwep/pickr": "^1.9.0"
 	}
 }
