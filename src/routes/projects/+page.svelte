@@ -60,4 +60,19 @@
 		display: flex;
 		flex-direction: column;
 	}
+
+	.project-container::-webkit-scrollbar-track {
+		/* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+		background-color: #f5f5f5;
+	}
+
+	.project-container::-webkit-scrollbar {
+		width: 10px;
+		background-color: #f5f5f5;
+	}
+
+	.project-container::-webkit-scrollbar-thumb {
+		background-color: #f5f5f5;
+		border: 2px solid #555555;
+	}
 </style>
