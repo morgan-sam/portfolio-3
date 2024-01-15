@@ -4,8 +4,8 @@
 </script>
 
 <div class="grid grid-cols-3 items-center justify-center w-full h-full">
-	<div class="w-full h-3/4 flex items-center justify-center">
-		<div class="container">
+	<div class="w-full h-3/4 flex items-center justify-center overflow-hidden">
+		<div class="container slide-up">
 			<ul>
 				<h2>Experience</h2>
 				<div class="job-title">
@@ -60,13 +60,31 @@
 	.container {
 		width: 100%;
 		height: 100%;
-		padding-left: 20%;
+		margin-left: 20%;
 		display: flex;
 		flex-direction: column;
 		align-items: start;
 		justify-content: center;
 		z-index: 100;
+		background-color: white;
+		/* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
+		/* Add the animation */
 	}
+
+	.slide-up {
+		animation: slideUp 1s cubic-bezier(0, 0.99, 0.42, 0.99) forwards;
+	}
+
+	/* Keyframes for the slide-up animation */
+	@keyframes slideUp {
+		from {
+			transform: translateY(100%);
+		}
+		to {
+			transform: translateY(0%);
+		}
+	}
+
 	.container ul {
 		display: flex;
 		flex-direction: column;
