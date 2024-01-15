@@ -72,7 +72,7 @@
 </script>
 
 <!-- Your HTML code with correct binding syntax -->
-<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+<div class="ball-parent absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
 	<div class="ground absolute w-full h-full mix-blend-multiply">
 		<div
 			class="ground-shadow rounded-full"
@@ -125,6 +125,20 @@
 </div>
 
 <style>
+	/* @keyframes scaleAnimation {
+		0% {
+			transform: scale(1) translate(-50%, -50%);
+		}
+		50% {
+			transform: scale(2) translate(-25%, -25%);
+		}
+		100% {
+			transform: scale(1) translate(-50%, -50%);
+		}
+	}
+	.ball-parent {
+		animation: scaleAnimation 60s ease-in-out infinite;
+	} */
 	.ground {
 		bottom: -1%;
 		left: 55%;
