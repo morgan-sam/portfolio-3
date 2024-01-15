@@ -1,10 +1,32 @@
+<script lang="ts">
+	import { goto } from '$app/navigation';
+	function handleMouseover(event: MouseEvent | FocusEvent) {
+		const target = event.target as HTMLAnchorElement;
+		// Ensure the target is an anchor element and has a href attribute
+		if (target.tagName === 'A' && target.href) {
+			// Prevent the default navigation
+			event.preventDefault();
+			// Use SvelteKit's goto function to navigate
+			goto(target.pathname, { replaceState: true });
+		}
+	}
+</script>
+
 <!-- Navbar.svelte -->
 <nav class="navbar">
 	<ul class="flex items-center justify-center uppercase text-4xl">
-		<li class="absolute top-0 left-0"><a href="/">Home</a></li>
-		<li class="absolute top-0 right-0"><a href="/resume">Resume</a></li>
-		<li class="absolute bottom-0 left-0"><a href="/projects">Projects</a></li>
-		<li class="absolute bottom-0 right-0"><a href="/contact">Contact</a></li>
+		<li class="absolute top-0 left-0">
+			<a href="/" on:mouseover={handleMouseover} on:focus={handleMouseover}>Home</a>
+		</li>
+		<li class="absolute top-0 right-0">
+			<a href="/resume" on:mouseover={handleMouseover} on:focus={handleMouseover}>Resume</a>
+		</li>
+		<li class="absolute bottom-0 left-0">
+			<a href="/projects" on:mouseover={handleMouseover} on:focus={handleMouseover}>Projects</a>
+		</li>
+		<li class="absolute bottom-0 right-0">
+			<a href="/contact" on:mouseover={handleMouseover} on:focus={handleMouseover}>Contact</a>
+		</li>
 	</ul>
 	<div class="grid-border" />
 </nav>
