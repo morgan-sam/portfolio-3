@@ -4,4 +4,5 @@
 	import Subtitle from '$lib/components/Subtitle.svelte';
 </script>
 
-<Title>About</Title>
+<Title class="leading-8">Resume</Title>
+<Ball />
