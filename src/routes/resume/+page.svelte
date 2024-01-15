@@ -1,11 +1,13 @@
 <script>
 	import Ball from '$lib/components/Ball.svelte';
 	import Title from '$lib/components/Title.svelte';
+	import LeftContainer from '$lib/components/LeftContainer.svelte';
+	import Page from '$lib/components/Page.svelte';
 </script>
 
-<div class="grid grid-cols-3 items-center justify-center w-full h-full">
+<Page>
 	<div class="w-full h-3/4 flex items-center justify-center overflow-hidden">
-		<div class="container slide-up">
+		<LeftContainer>
 			<ul>
 				<h2>Experience</h2>
 				<div class="job-title">
@@ -47,44 +49,16 @@
 					React, Node, and MongoDB.
 				</p>
 			</ul>
-		</div>
+		</LeftContainer>
 	</div>
 	<div class="w-full h-full relative">
 		<Title class="top-[27%]">Resume</Title>
 		<Ball />
 	</div>
 	<div class="w-full h-full flex items-center justify-center">HELLO</div>
-</div>
+</Page>
 
 <style>
-	.container {
-		width: 100%;
-		height: 100%;
-		margin-left: 20%;
-		display: flex;
-		flex-direction: column;
-		align-items: start;
-		justify-content: center;
-		z-index: 100;
-		background-color: white;
-		/* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
-		/* Add the animation */
-	}
-
-	.slide-up {
-		animation: slideUp 1s cubic-bezier(0, 0.99, 0.42, 0.99) forwards;
-	}
-
-	/* Keyframes for the slide-up animation */
-	@keyframes slideUp {
-		from {
-			transform: translateY(100%);
-		}
-		to {
-			transform: translateY(0%);
-		}
-	}
-
 	.container ul {
 		display: flex;
 		flex-direction: column;

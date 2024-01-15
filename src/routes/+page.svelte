@@ -1,20 +1,17 @@
 <script>
 	import Ball from '$lib/components/Ball.svelte';
+	import Page from '$lib/components/Page.svelte';
 </script>
 
-<!-- 3x1 grid -->
-<div class="grid grid-cols-1 items-center justify-center w-full h-full">
-	<div class="w-full h-full relative">
-		<h1 class="text-8xl z-10 leading-[56px] text-[#333333] {$$restProps.class || ''} ">
-			<slot />
-		</h1>
+<Page columns="1">
+	<div class="relative">
 		<div class="title">
 			<h1>Sam Morgan</h1>
 			<h2 class="text-6xl">Fullstack Developer</h2>
 		</div>
 		<Ball />
 	</div>
-</div>
+</Page>
 
 <style>
 	.title {

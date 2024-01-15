@@ -39,7 +39,6 @@
 		width: 100vw;
 		height: 100vh;
 		box-sizing: border-box;
-		z-index: 100;
 		font-family: 'DM Sans', sans-serif;
 		font-optical-sizing: auto;
 		font-weight: 300;
