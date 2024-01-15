@@ -1,9 +1,11 @@
 <script>
 	import Ball from '$lib/components/Ball.svelte';
 	import Title from '$lib/components/Title.svelte';
-	import Subtitle from '$lib/components/Subtitle.svelte';
 </script>
 
-<Title class="leading-[46px]">Sam Morgan</Title>
-<Subtitle>Fullstack developer</Subtitle>
+<Title class="top-[23%] z-20">
+	<h1>Sam Morgan</h1>
+	<h2 class="text-6xl">Fullstack Developer</h2>
+</Title>
+
 <Ball />
