@@ -29,6 +29,7 @@
 		background: white;
 		padding: 15px;
 		margin: 10px;
+		z-index: 1000;
 	}
 	.grid-border {
 		--border-width: 3%;
@@ -38,6 +39,6 @@
 		width: calc(100% - var(--border-width) * 2);
 		height: calc(100% - var(--border-width) * 2);
 		border: 2px solid #555;
-		z-index: -1;
+		z-index: -200;
 	}
 </style>
