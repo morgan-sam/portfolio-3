@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
+
 	function handleMouseover(event: MouseEvent | FocusEvent) {
 		const target = event.target as HTMLAnchorElement;
 		// Ensure the target is an anchor element and has a href attribute
@@ -16,16 +18,40 @@
 <nav class="navbar">
 	<ul class="flex items-center justify-center uppercase text-4xl">
 		<li class="absolute top-0 left-0">
-			<a href="/" on:mouseover={handleMouseover} on:focus={handleMouseover}>Home</a>
+			<a
+				href="/"
+				class="navlink"
+				class:active={$page.url.pathname === '/'}
+				on:mouseover={handleMouseover}
+				on:focus={handleMouseover}>Home</a
+			>
 		</li>
 		<li class="absolute top-0 right-0">
-			<a href="/resume" on:mouseover={handleMouseover} on:focus={handleMouseover}>Resume</a>
+			<a
+				href="/resume"
+				class="navlink"
+				class:active={$page.url.pathname === '/resume'}
+				on:mouseover={handleMouseover}
+				on:focus={handleMouseover}>Resume</a
+			>
 		</li>
 		<li class="absolute bottom-0 left-0">
-			<a href="/projects" on:mouseover={handleMouseover} on:focus={handleMouseover}>Projects</a>
+			<a
+				href="/projects"
+				class="navlink"
+				class:active={$page.url.pathname === '/projects'}
+				on:mouseover={handleMouseover}
+				on:focus={handleMouseover}>Projects</a
+			>
 		</li>
 		<li class="absolute bottom-0 right-0">
-			<a href="/contact" on:mouseover={handleMouseover} on:focus={handleMouseover}>Contact</a>
+			<a
+				href="/contact"
+				class="navlink"
+				class:active={$page.url.pathname === '/contact'}
+				on:mouseover={handleMouseover}
+				on:focus={handleMouseover}>Contact</a
+			>
 		</li>
 	</ul>
 	<div class="grid-border" />
@@ -52,6 +78,11 @@
 		margin: 10px;
 		z-index: 1000;
 	}
+
+	.navlink.active {
+		text-decoration: line-through;
+	}
+
 	.grid-border {
 		--border-width: 3%;
 		position: absolute;
