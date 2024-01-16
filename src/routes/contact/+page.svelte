@@ -4,12 +4,22 @@
 	import Page from '$lib/components/Page.svelte';
 	import Container from '$lib/components/Container.svelte';
 	import { dev } from '$app/environment';
+	import ThankYou from '$lib/components/ThankYou.svelte';
 </script>
 
 <Page>
-	<Container>
-		<div class="mx-auto mb-8">
-			<h2>Please email me at:</h2>
+	<Container delay={0}>
+		<h3 class="mx-auto">
+			<ThankYou />
+		</h3>
+	</Container>
+	<div class="w-full h-full relative">
+		<Title class="top-[27%]">Contact</Title>
+		<Ball />
+	</div>
+	<Container delay={250}>
+		<div class="mx-auto mb-8 text-center">
+			<h2>Email me at:</h2>
 			<h2 class="email">hello@smorgan.dev</h2>
 			<div class="flex mx-auto gap-2 items-center justify-center">
 				<button
@@ -72,14 +82,7 @@
 					<a href="https://www.github.com/morgan-sam"><i class="ci ci-github ci-2x" /></a>
 				</li>
 			</ul>
-		</div></Container
-	>
-	<div class="w-full h-full relative">
-		<Title class="top-[27%]">Contact</Title>
-		<Ball />
-	</div>
-	<Container delay={250}>
-		<h3 class="mx-auto">THANK YOU</h3>
+		</div>
 	</Container>
 </Page>
 
@@ -99,5 +102,6 @@
 	ul {
 		display: flex;
 		margin: 0 auto;
+		justify-content: center;
 	}
 </style>
