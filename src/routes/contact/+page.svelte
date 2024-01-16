@@ -78,7 +78,9 @@
 		<Title class="top-[27%]">Contact</Title>
 		<Ball />
 	</div>
-	<div class="w-full h-full flex items-center justify-center">HELLO</div>
+	<Container delay={250}>
+		<h3 class="mx-auto">THANK YOU</h3>
+	</Container>
 </Page>
 
 <style>
