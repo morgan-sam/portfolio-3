@@ -18,16 +18,8 @@
 				<img src="/projects/train-tracks.png" alt="Project Management Platform" />
 			</li>
 			<li class="project-card">
-				<h2>Project Managment Platform</h2>
-				<img src="/projects/project-management.png" alt="Project Management Platform" />
-			</li>
-			<li class="project-card">
-				<h2>Palace Guard</h2>
-				<img src="/projects/palace-guard.png" alt="Project Management Platform" />
-			</li>
-			<li class="project-card">
-				<h2>Train Tracks</h2>
-				<img src="/projects/train-tracks.png" alt="Project Management Platform" />
+				<h2>Nxcro Store</h2>
+				<img src="/projects/nxcro-store.png" alt="Nxcro Store" />
 			</li>
 			<li class="project-card">
 				<h2>Project Managment Platform</h2>
@@ -62,5 +54,11 @@
 		z-index: 1000;
 		display: flex;
 		flex-direction: column;
+	}
+	img {
+		margin-top: 10px;
+	}
+	h2 {
+		font-size: 1.5rem;
 	}
 </style>

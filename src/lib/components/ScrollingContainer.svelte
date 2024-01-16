@@ -18,6 +18,7 @@
 		max-height: 100%;
 		overflow-y: scroll;
 		z-index: 2000;
+		gap: 10px;
 	}
 
 	.scrolling-container::-webkit-scrollbar-track {
