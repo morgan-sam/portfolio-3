@@ -20,13 +20,13 @@
 	}
 
 	.slide-up {
-		animation: slideUp 1s cubic-bezier(0, 0.99, 0.42, 0.99) forwards;
+		animation: slideUp 0.5s cubic-bezier(0, 0.99, 0.42, 0.99) forwards;
 	}
 
 	/* Keyframes for the slide-up animation */
 	@keyframes slideUp {
 		from {
-			transform: translateY(100%);
+			transform: translateY(50px);
 		}
 		to {
 			transform: translateY(0%);
