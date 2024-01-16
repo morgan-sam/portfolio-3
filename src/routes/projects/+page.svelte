@@ -7,36 +7,34 @@
 </script>
 
 <Page>
-	<div class="w-full h-full flex items-center justify-center">
-		<Container>
-			<ScrollingContainer>
-				<li class="project-card">
-					<h2>Palace Guard</h2>
-					<img src="/projects/palace-guard.png" alt="Project Management Platform" />
-				</li>
-				<li class="project-card">
-					<h2>Train Tracks</h2>
-					<img src="/projects/train-tracks.png" alt="Project Management Platform" />
-				</li>
-				<li class="project-card">
-					<h2>Project Managment Platform</h2>
-					<img src="/projects/project-management.png" alt="Project Management Platform" />
-				</li>
-				<li class="project-card">
-					<h2>Palace Guard</h2>
-					<img src="/projects/palace-guard.png" alt="Project Management Platform" />
-				</li>
-				<li class="project-card">
-					<h2>Train Tracks</h2>
-					<img src="/projects/train-tracks.png" alt="Project Management Platform" />
-				</li>
-				<li class="project-card">
-					<h2>Project Managment Platform</h2>
-					<img src="/projects/project-management.png" alt="Project Management Platform" />
-				</li>
-			</ScrollingContainer>
-		</Container>
-	</div>
+	<Container>
+		<ScrollingContainer>
+			<li class="project-card">
+				<h2>Palace Guard</h2>
+				<img src="/projects/palace-guard.png" alt="Project Management Platform" />
+			</li>
+			<li class="project-card">
+				<h2>Train Tracks</h2>
+				<img src="/projects/train-tracks.png" alt="Project Management Platform" />
+			</li>
+			<li class="project-card">
+				<h2>Project Managment Platform</h2>
+				<img src="/projects/project-management.png" alt="Project Management Platform" />
+			</li>
+			<li class="project-card">
+				<h2>Palace Guard</h2>
+				<img src="/projects/palace-guard.png" alt="Project Management Platform" />
+			</li>
+			<li class="project-card">
+				<h2>Train Tracks</h2>
+				<img src="/projects/train-tracks.png" alt="Project Management Platform" />
+			</li>
+			<li class="project-card">
+				<h2>Project Managment Platform</h2>
+				<img src="/projects/project-management.png" alt="Project Management Platform" />
+			</li>
+		</ScrollingContainer>
+	</Container>
 	<div class="w-full h-full relative">
 		<Title class="top-[27%]">Projects</Title>
 		<Ball />

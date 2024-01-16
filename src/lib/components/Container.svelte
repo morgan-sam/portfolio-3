@@ -5,8 +5,8 @@
 <style>
 	.container {
 		width: 100%;
-		height: 80%;
-		margin-left: 20%;
+		height: 100%;
+		/* margin-left: 20%; */
 		display: flex;
 		flex-direction: column;
 		align-items: start;
