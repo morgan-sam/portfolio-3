@@ -1,14 +1,14 @@
 <script>
 	import Ball from '$lib/components/Ball.svelte';
 	import Title from '$lib/components/Title.svelte';
-	import LeftContainer from '$lib/components/LeftContainer.svelte';
+	import Container from '$lib/components/Container.svelte';
 	import Page from '$lib/components/Page.svelte';
 	import ScrollingContainer from '$lib/components/ScrollingContainer.svelte';
 </script>
 
 <Page>
 	<div class="w-full h-full flex items-center justify-center">
-		<LeftContainer>
+		<Container>
 			<ScrollingContainer>
 				<li class="project-card">
 					<h2>Palace Guard</h2>
@@ -35,7 +35,7 @@
 					<img src="/projects/project-management.png" alt="Project Management Platform" />
 				</li>
 			</ScrollingContainer>
-		</LeftContainer>
+		</Container>
 	</div>
 	<div class="w-full h-full relative">
 		<Title class="top-[27%]">Projects</Title>

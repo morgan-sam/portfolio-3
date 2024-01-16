@@ -1,13 +1,13 @@
 <script>
 	import Ball from '$lib/components/Ball.svelte';
 	import Title from '$lib/components/Title.svelte';
-	import LeftContainer from '$lib/components/LeftContainer.svelte';
+	import Container from '$lib/components/Container.svelte';
 	import Page from '$lib/components/Page.svelte';
 </script>
 
 <Page>
 	<div class="w-full h-3/4 flex items-center justify-center overflow-hidden">
-		<LeftContainer>
+		<Container>
 			<ul class="projects-container">
 				<li><h2>Experience</h2></li>
 				<li>
@@ -55,7 +55,7 @@
 					</p>
 				</li>
 			</ul>
-		</LeftContainer>
+		</Container>
 	</div>
 	<div class="w-full h-full relative">
 		<Title class="top-[27%]">Resume</Title>
