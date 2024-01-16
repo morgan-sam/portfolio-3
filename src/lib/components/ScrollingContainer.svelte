@@ -1,3 +1,11 @@
+<script>
+	import { onMount } from 'svelte';
+	onMount(() => {
+		const scrollingContainer = document.querySelector('.scrolling-container');
+		scrollingContainer.scrollTop = 0;
+	});
+</script>
+
 <div class="scrolling-container">
 	<slot />
 </div>
