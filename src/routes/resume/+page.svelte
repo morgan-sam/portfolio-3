@@ -11,7 +11,7 @@
 		<li>
 			<div class="job-title">
 				<h3>Open Source Contributer</h3>
-				<h3>2020-2021</h3>
+				<h3>2020 - 2021</h3>
 			</div>
 			<p>Contributed to:</p>
 			<div class="w-full flex justify-between">
@@ -32,7 +32,7 @@
 		<li>
 			<div class="job-title">
 				<h3>BlockFi - Frontend Developer</h3>
-				<h3>2021-2022</h3>
+				<h3>2021 - 2022</h3>
 			</div>
 			<p>
 				Developed and maintained the BlockFi website, including the application process, blog, and
@@ -86,6 +86,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
+		width: 100%;
 	}
 	.job-title {
 		width: 100%;
@@ -110,7 +111,8 @@
 	}
 	p {
 		font-size: 1.25rem;
-		font-weight: 200;
+		font-weight: 400;
+		font-family: 'DM Sans', sans-serif;
 	}
 	.contribution-link {
 		color: rgb(104, 104, 192);
