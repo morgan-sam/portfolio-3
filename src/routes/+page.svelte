@@ -3,7 +3,7 @@
 	import Page from '$lib/components/Page.svelte';
 </script>
 
-<Page columns="1">
+<Page columns={1}>
 	<div class="relative">
 		<div class="title">
 			<h1>Sam Morgan</h1>
