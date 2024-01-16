@@ -6,84 +6,86 @@
 </script>
 
 <Page>
-	<Container>
-		<ul class="projects-container">
-			<li><h2>Experience</h2></li>
-			<li>
-				<div class="job-title">
-					<h3>Open Source Contributer</h3>
-					<h3>2020-2021</h3>
-				</div>
-				<p>Contributed to:</p>
-				<div class="w-full flex justify-between">
-					<a class="contribution-link" href="https://github.com/gatsbyjs/gatsby/pull/25448"
-						><h4>@gatsbyjs</h4></a
-					>
-					<a class="contribution-link" href="https://github.com/electron/electron/pull/25105"
-						><h4>@electron</h4></a
-					>
-					<a class="contribution-link" href="https://github.com/serverless/serverless/pull/8160"
-						><h4>@serverless</h4></a
-					>
-					<a class="contribution-link" href="https://github.com/mui/material-ui/pull/22146"
-						><h4>@mui</h4></a
-					>
-				</div>
-			</li>
-			<li>
-				<div class="job-title">
-					<h3>BlockFi - Frontend Developer</h3>
-					<h3>2021-2022</h3>
-				</div>
-				<p>
-					Developed and maintained the BlockFi website, including the application process, blog, and
-					landing pages. Worked with the marketing team to create new pages and features to increase
-					conversion rates.
-				</p>
-			</li>
-			<li>
-				<div class="job-title">
-					<h3>Freelance Fullstack Developer</h3>
-					<h3>2022 - Present</h3>
-				</div>
-				<p>
-					Worked with clients to create websites and applications to meet their needs. Developed
-					websites and applications using React, Node, and MongoDB. Worked with clients to create
-					websites and applications to meet their needs. Developed websites and applications using
-					React, Node, and MongoDB.
-				</p>
-			</li>
-		</ul>
+	<Container delay={0} gap={'30px'}>
+		<li><h2>Experience</h2></li>
+		<li>
+			<div class="job-title">
+				<h3>Open Source Contributer</h3>
+				<h3>2020-2021</h3>
+			</div>
+			<p>Contributed to:</p>
+			<div class="w-full flex justify-between">
+				<a class="contribution-link" href="https://github.com/gatsbyjs/gatsby/pull/25448"
+					><h4>@gatsbyjs</h4></a
+				>
+				<a class="contribution-link" href="https://github.com/electron/electron/pull/25105"
+					><h4>@electron</h4></a
+				>
+				<a class="contribution-link" href="https://github.com/serverless/serverless/pull/8160"
+					><h4>@serverless</h4></a
+				>
+				<a class="contribution-link" href="https://github.com/mui/material-ui/pull/22146"
+					><h4>@mui</h4></a
+				>
+			</div>
+		</li>
+		<li>
+			<div class="job-title">
+				<h3>BlockFi - Frontend Developer</h3>
+				<h3>2021-2022</h3>
+			</div>
+			<p>
+				Developed and maintained the BlockFi website, including the application process, blog, and
+				landing pages. Worked with the marketing team to create new pages and features to increase
+				conversion rates.
+			</p>
+		</li>
+		<li>
+			<div class="job-title">
+				<h3>Freelance Fullstack Developer</h3>
+				<h3>2022 - Present</h3>
+			</div>
+			<p>
+				Worked with clients to create websites and applications to meet their needs. Developed
+				websites and applications using React, Node, and MongoDB. Worked with clients to create
+				websites and applications to meet their needs. Developed websites and applications using
+				React, Node, and MongoDB.
+			</p>
+		</li>
 	</Container>
 	<div class="w-full h-full relative">
 		<Title class="top-[27%]">Resume</Title>
 		<Ball />
 	</div>
-	<Container>
-		<ul class="projects-container">
-			<li><h2>Client Testimonials</h2></li>
-			<li>
-				<div class="job-title">
-					<h3>Open Source Contributer</h3>
-					<h3>2020-2021</h3>
-				</div>
-				<p>
-					Overall this is literally one of the best results I've seen from a developer - super
-					frictionless experience and you understood the task perfectly. I really appreciate you,
-					keep up the great work!<br />Happy to send you multiple projects moving forward 🙂
-				</p>
-			</li>
-		</ul></Container
-	>
+	<Container delay={250} gap={'30px'}>
+		<li><h2>Client Testimonials</h2></li>
+		<li>
+			<p>
+				"Overall this is literally one of the best results I've seen from a developer - super
+				frictionless experience and you understood the task perfectly. I really appreciate you, keep
+				up the great work! Happy to send you multiple projects moving forward 🙂"
+			</p>
+			<h3>- Nico Aguirre, Trena Digital</h3>
+		</li>
+		<li>
+			<p>"Speedy, reliable and great work. Will be working with Sam in the future again soon!"</p>
+			<h3>- Luke Rourke, LPC IT Design</h3>
+		</li>
+		<li>
+			<p>
+				"As always an amazing job, have worked with him many times. Always get the job done and on
+				time."
+			</p>
+			<h3>- Sam Golshan, Popsi Lingerie</h3>
+		</li>
+	</Container>
 </Page>
 
 <style>
-	.projects-container {
+	li {
 		display: flex;
 		flex-direction: column;
-		align-items: start;
-		justify-content: center;
-		gap: 20px;
+		gap: 10px;
 	}
 	.job-title {
 		width: 100%;

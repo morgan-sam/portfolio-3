@@ -1,4 +1,9 @@
-<div class="container slide-up">
+<script>
+	export let delay = 0; // Default number of columns
+	export let gap = '0px'; // Default number of columns
+</script>
+
+<div class="container slide-up" style="animation-delay: {delay}ms; gap: {gap}">
 	<slot />
 </div>
 
@@ -16,7 +21,14 @@
 		box-sizing: border-box;
 		max-height: 100vh;
 		overflow: hidden;
+		transform: translateY(20px);
+		opacity: 0;
 		/* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
+	}
+
+	.container:last-child {
+		text-align: right;
+		align-items: end;
 	}
 
 	.slide-up {
