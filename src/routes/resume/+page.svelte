@@ -8,46 +8,52 @@
 <Page>
 	<div class="w-full h-3/4 flex items-center justify-center overflow-hidden">
 		<LeftContainer>
-			<ul>
-				<h2>Experience</h2>
-				<div class="job-title">
-					<h3>Open Source Contributer</h3>
-					<h3>2020-2021</h3>
-				</div>
-				<p>Contributed to:</p>
-				<div class="w-full flex justify-between">
-					<a class="contribution-link" href="https://github.com/gatsbyjs/gatsby/pull/25448"
-						><h4>@gatsbyjs</h4></a
-					>
-					<a class="contribution-link" href="https://github.com/electron/electron/pull/25105"
-						><h4>@electron</h4></a
-					>
-					<a class="contribution-link" href="https://github.com/serverless/serverless/pull/8160"
-						><h4>@serverless</h4></a
-					>
-					<a class="contribution-link" href="https://github.com/mui/material-ui/pull/22146"
-						><h4>@mui</h4></a
-					>
-				</div>
-				<div class="job-title">
-					<h3>BlockFi - Frontend Developer</h3>
-					<h3>2021-2022</h3>
-				</div>
-				<p>
-					Developed and maintained the BlockFi website, including the application process, blog, and
-					landing pages. Worked with the marketing team to create new pages and features to increase
-					conversion rates.
-				</p>
-				<div class="job-title">
-					<h3>Freelance Fullstack Developer</h3>
-					<h3>2022 - Present</h3>
-				</div>
-				<p>
-					Worked with clients to create websites and applications to meet their needs. Developed
-					websites and applications using React, Node, and MongoDB. Worked with clients to create
-					websites and applications to meet their needs. Developed websites and applications using
-					React, Node, and MongoDB.
-				</p>
+			<ul class="projects-container">
+				<li><h2>Experience</h2></li>
+				<li>
+					<div class="job-title">
+						<h3>Open Source Contributer</h3>
+						<h3>2020-2021</h3>
+					</div>
+					<p>Contributed to:</p>
+					<div class="w-full flex justify-between">
+						<a class="contribution-link" href="https://github.com/gatsbyjs/gatsby/pull/25448"
+							><h4>@gatsbyjs</h4></a
+						>
+						<a class="contribution-link" href="https://github.com/electron/electron/pull/25105"
+							><h4>@electron</h4></a
+						>
+						<a class="contribution-link" href="https://github.com/serverless/serverless/pull/8160"
+							><h4>@serverless</h4></a
+						>
+						<a class="contribution-link" href="https://github.com/mui/material-ui/pull/22146"
+							><h4>@mui</h4></a
+						>
+					</div>
+				</li>
+				<li>
+					<div class="job-title">
+						<h3>BlockFi - Frontend Developer</h3>
+						<h3>2021-2022</h3>
+					</div>
+					<p>
+						Developed and maintained the BlockFi website, including the application process, blog,
+						and landing pages. Worked with the marketing team to create new pages and features to
+						increase conversion rates.
+					</p>
+				</li>
+				<li>
+					<div class="job-title">
+						<h3>Freelance Fullstack Developer</h3>
+						<h3>2022 - Present</h3>
+					</div>
+					<p>
+						Worked with clients to create websites and applications to meet their needs. Developed
+						websites and applications using React, Node, and MongoDB. Worked with clients to create
+						websites and applications to meet their needs. Developed websites and applications using
+						React, Node, and MongoDB.
+					</p>
+				</li>
 			</ul>
 		</LeftContainer>
 	</div>
@@ -59,7 +65,7 @@
 </Page>
 
 <style>
-	.container ul {
+	.projects-container {
 		display: flex;
 		flex-direction: column;
 		align-items: start;
