@@ -39,7 +39,19 @@
 		<Title class="top-[27%]">Projects</Title>
 		<Ball />
 	</div>
-	<div class="w-full h-full flex items-center justify-center">HELLO</div>
+	<Container delay={250} style="overflow: visible;">
+		{#each { length: 30 } as _, i}
+			<h3
+				style="
+					opacity: {Math.max(0, 1 - Math.log(i + 1) / Math.log(30))};
+					letter-spacing: {Math.max(0, 1 - Math.log(i + 1) / Math.log(30)) / 1.75}em;
+					white-space: nowrap;
+				"
+			>
+				Hover over a project to see more details
+			</h3>
+		{/each}
+	</Container>
 </Page>
 
 <style>

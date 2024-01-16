@@ -1,9 +1,10 @@
 <script>
 	export let delay = 0; // Default number of columns
 	export let gap = '0px'; // Default number of columns
+	export let style = '';
 </script>
 
-<div class="container slide-up" style="animation-delay: {delay}ms; gap: {gap}">
+<div class="container slide-up" style="animation-delay: {delay}ms; gap: {gap}; {style}">
 	<slot />
 </div>
 
