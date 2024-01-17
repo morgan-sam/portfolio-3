@@ -14,6 +14,22 @@
 			console.log('Active Project ID:', activeProjectId); // Debugging line
 		}
 	}
+
+	// create image size oject for each project
+	const projectImageSizes = {
+		'palace-guard': {
+			width: 460
+		},
+		'train-tracks': {
+			width: 280
+		},
+		'nxcro-hydrogen-store': {
+			width: 460
+		},
+		'project-management-platform': {
+			width: 460
+		}
+	};
 </script>
 
 <Page>
@@ -32,7 +48,7 @@
 				</h3>
 			{/each}
 		</div>
-		{#each ['palace-guard', 'train-tracks', 'nxcro-store', 'project-management'] as projectId}
+		{#each ['palace-guard', 'train-tracks', 'nxcro-hydrogen-store', 'project-management-platform'] as projectId}
 			<div
 				id={`${projectId}-details`}
 				class="project-details"
@@ -49,7 +65,7 @@
 	</div>
 	<Container delay={250}>
 		<ScrollingContainer>
-			{#each ['palace-guard', 'train-tracks', 'nxcro-store', 'project-management'] as projectId}
+			{#each ['palace-guard', 'train-tracks', 'nxcro-hydrogen-store', 'project-management-platform'] as projectId}
 				<li
 					id={projectId}
 					class="project-card"
@@ -57,7 +73,11 @@
 					on:focus={projectMouseOver}
 				>
 					<h2>{projectId}</h2>
-					<img src={`/projects/${projectId}.png`} alt={projectId} />
+					<img
+						src={`/projects/${projectId}.png`}
+						alt={projectId}
+						width={projectImageSizes[projectId].width}
+					/>
 				</li>
 			{/each}
 		</ScrollingContainer>

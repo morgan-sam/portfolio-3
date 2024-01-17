@@ -14,7 +14,7 @@
 	.scrolling-container {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: end;
 		max-height: 100%;
 		overflow-y: scroll;
 		z-index: 2000;
