@@ -21,12 +21,26 @@
 				width: number | undefined;
 			};
 			tags: string[];
+			links?: {
+				name: string;
+				url: string;
+			}[];
 		};
 	};
 	const projectInfo = {
 		'palace-guard': {
 			image: { width: 460 },
-			tags: ['React', 'ChatGPT', 'AI', 'Firebase Functions']
+			tags: ['React', 'ChatGPT', 'AI', 'Firebase Functions'],
+			links: [
+				{
+					name: 'Live Demo',
+					url: 'https://palace-guard.web.app/'
+				},
+				{
+					name: 'GitHub Repo',
+					url: 'https://github.com/morgan-sam/palace-guard'
+				}
+			]
 		},
 		'train-tracks': {
 			image: { width: 280 },
@@ -34,7 +48,7 @@
 		},
 		'nxcro-hydrogen-store': {
 			image: { width: 460 },
-			tags: ['React', 'Hydrogen', 'Shopify']
+			tags: ['React', 'Hydrogen', 'Shopify', 'Design']
 		},
 		'project-management-platform': {
 			image: { width: 460 },
@@ -71,6 +85,22 @@
 						<li class="tag">{tag}</li>
 					{/each}
 				</ul>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quibusdam, voluptatum,
+					quia, quod voluptatem voluptate quos asperiores quas voluptatibus quidem doloribus.
+					Quisquam quibusdam, voluptatum, quia, quod voluptatem voluptate quos asperiores quas
+					voluptatibus quidem doloribus.
+				</p>
+				<div class="link-container">
+					{#each projectInfo[projectId]['links'] || [] as link}
+						<button
+							class="bg-blue-900 text-white rounded-md px-6 py-2 text-xl"
+							on:click={() => window.open(link.url)}
+						>
+							{link.name}
+						</button>
+					{/each}
+				</div>
 			</div>
 		{/each}
 	</Container>
@@ -139,5 +169,37 @@
 		padding: 5px 10px;
 		margin: 5px;
 		border-radius: 5px;
+	}
+	p {
+		margin: 20px 0;
+		font-family: 'DM Sans', sans-serif;
+	}
+	.link-container {
+		display: flex;
+		gap: 10px;
+		margin-top: 20px;
+	}
+
+	.link-container button {
+		padding: 0.5rem 1.5rem;
+		border-radius: 0.375rem;
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+		color: #ffffff;
+		background-color: #1e3a8a;
+		cursor: pointer;
+	}
+	.link-container button:hover {
+		background-color: #2563eb;
+	}
+	.link-container button:nth-child(2) {
+		background-color: transparent;
+		border: 2px solid #1e3a8a;
+		color: #1e3a8a;
+	}
+	.link-container button:nth-child(2):hover {
+		background-color: #2563eb;
+		border: 2px solid #2563eb;
+		color: #ffffff;
 	}
 </style>
