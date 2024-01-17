@@ -17,26 +17,7 @@
 </script>
 
 <Page>
-	<Container>
-		<ScrollingContainer>
-			{#each ['palace-guard', 'train-tracks', 'nxcro-store', 'project-management'] as projectId}
-				<li
-					id={projectId}
-					class="project-card"
-					on:mouseover={projectMouseOver}
-					on:focus={projectMouseOver}
-				>
-					<h2>{projectId}</h2>
-					<img src={`/projects/${projectId}.png`} alt={projectId} />
-				</li>
-			{/each}
-		</ScrollingContainer>
-	</Container>
-	<div class="w-full h-full relative">
-		<Title class="top-[27%]">Projects</Title>
-		<Ball />
-	</div>
-	<Container delay={250} style="overflow: visible;">
+	<Container delay={0} style="overflow: visible;">
 		<div class={activeProjectId ? 'hover-instructions hidden' : 'hover-instructions'}>
 			{#each { length: 31 } as _, i}
 				<h3
@@ -61,6 +42,25 @@
 				{projectId}
 			</div>
 		{/each}
+	</Container>
+	<div class="w-full h-full relative">
+		<Title class="top-[27%]">Projects</Title>
+		<Ball />
+	</div>
+	<Container delay={250}>
+		<ScrollingContainer>
+			{#each ['palace-guard', 'train-tracks', 'nxcro-store', 'project-management'] as projectId}
+				<li
+					id={projectId}
+					class="project-card"
+					on:mouseover={projectMouseOver}
+					on:focus={projectMouseOver}
+				>
+					<h2>{projectId}</h2>
+					<img src={`/projects/${projectId}.png`} alt={projectId} />
+				</li>
+			{/each}
+		</ScrollingContainer>
 	</Container>
 </Page>
 
