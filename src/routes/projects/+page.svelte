@@ -15,15 +15,32 @@
 		}
 	}
 
-	type ProjectImageSizes = {
-		[key: string]: { width: number } | undefined;
+	type projectInfoType = {
+		[projectId: string]: {
+			image: {
+				width: number | undefined;
+			};
+			tags: string[];
+		};
 	};
-	const projectImageSizes = {
-		'palace-guard': { width: 460 },
-		'train-tracks': { width: 280 },
-		'nxcro-hydrogen-store': { width: 460 },
-		'project-management-platform': { width: 460 }
-	} as ProjectImageSizes;
+	const projectInfo = {
+		'palace-guard': {
+			image: { width: 460 },
+			tags: ['React', 'ChatGPT', 'AI', 'Firebase Functions']
+		},
+		'train-tracks': {
+			image: { width: 280 },
+			tags: ['React', 'Algorithms', 'BFS']
+		},
+		'nxcro-hydrogen-store': {
+			image: { width: 460 },
+			tags: ['React', 'Hydrogen', 'Shopify']
+		},
+		'project-management-platform': {
+			image: { width: 460 },
+			tags: ['React', 'Node.js', 'Express', 'PostgreSQL']
+		}
+	} as projectInfoType;
 </script>
 
 <Page>
@@ -48,8 +65,12 @@
 				class="project-details"
 				class:active={activeProjectId === projectId}
 			>
-				>
-				{projectId}
+				<h2 class="project-title">{projectId}</h2>
+				<ul class="tags-container">
+					{#each projectInfo[projectId]['tags'] as tag}
+						<li class="tag">{tag}</li>
+					{/each}
+				</ul>
 			</div>
 		{/each}
 	</Container>
@@ -70,7 +91,7 @@
 					<img
 						src={`/projects/${projectId}.png`}
 						alt={projectId}
-						width={projectImageSizes[projectId]?.width}
+						width={projectInfo[projectId]['image']?.width}
 					/>
 				</li>
 			{/each}
@@ -104,5 +125,19 @@
 	}
 	.hover-instructions.hidden {
 		display: none;
+	}
+
+	.project-title {
+		font-size: 2.5rem;
+	}
+	.tags-container {
+		display: flex;
+	}
+	.tag {
+		background: #555;
+		color: white;
+		padding: 5px 10px;
+		margin: 5px;
+		border-radius: 5px;
 	}
 </style>
