@@ -32,13 +32,14 @@
 		<Ball />
 	</div>
 	<Container delay={250} style="overflow: visible;">
-		{#each { length: 30 } as _, i}
+		{#each { length: 31 } as _, i}
 			<h3
 				style="
-					opacity: {Math.max(0, 1 - Math.log(i + 1) / Math.log(30))};
-					letter-spacing: {Math.max(0, 1 - Math.log(i + 1) / Math.log(30)) / 1.75}em;
-					white-space: nowrap;
-				"
+			font-size: {i === 15 ? 1.5 : 1}rem;
+            opacity: {i === 15 ? 1 : 1 - Math.abs(Math.sin((Math.PI * i) / (31 - 1)))};
+            letter-spacing: {(1 - Math.abs(Math.sin((Math.PI * i) / (31 - 1)))) / 1.75}em;
+            white-space: nowrap;
+        "
 			>
 				Hover over a project to see more details
 			</h3>
