@@ -1,30 +1,35 @@
-<script>
+<script lang="ts">
 	import Ball from '$lib/components/Ball.svelte';
 	import Title from '$lib/components/Title.svelte';
 	import Container from '$lib/components/Container.svelte';
 	import Page from '$lib/components/Page.svelte';
 	import ScrollingContainer from '$lib/components/ScrollingContainer.svelte';
+
+	let activeProjectId = null as string | null;
+
+	function projectMouseOver(event: any) {
+		const target = event.currentTarget; // Using currentTarget
+		if (target.tagName === 'LI' && target.id) {
+			activeProjectId = target.id;
+			console.log('Active Project ID:', activeProjectId); // Debugging line
+		}
+	}
 </script>
 
 <Page>
 	<Container>
 		<ScrollingContainer>
-			<li class="project-card">
-				<h2>Palace Guard</h2>
-				<img src="/projects/palace-guard.png" alt="Project Management Platform" />
-			</li>
-			<li class="project-card">
-				<h2>Train Tracks</h2>
-				<img src="/projects/train-tracks.png" alt="Project Management Platform" />
-			</li>
-			<li class="project-card">
-				<h2>Nxcro Store</h2>
-				<img src="/projects/nxcro-store.png" alt="Nxcro Store" />
-			</li>
-			<li class="project-card">
-				<h2>Project Managment Platform</h2>
-				<img src="/projects/project-management.png" alt="Project Management Platform" />
-			</li>
+			{#each ['palace-guard', 'train-tracks', 'nxcro-store', 'project-management'] as projectId}
+				<li
+					id={projectId}
+					class="project-card"
+					on:mouseover={projectMouseOver}
+					on:focus={projectMouseOver}
+				>
+					<h2>{projectId}</h2>
+					<img src={`/projects/${projectId}.png`} alt={projectId} />
+				</li>
+			{/each}
 		</ScrollingContainer>
 	</Container>
 	<div class="w-full h-full relative">
@@ -32,17 +37,29 @@
 		<Ball />
 	</div>
 	<Container delay={250} style="overflow: visible;">
-		{#each { length: 31 } as _, i}
-			<h3
-				style="
-			font-size: {i === 15 ? 1.5 : 1}rem;
-            opacity: {i === 15 ? 1 : 1 - Math.abs(Math.sin((Math.PI * i) / (31 - 1)))};
-            letter-spacing: {(1 - Math.abs(Math.sin((Math.PI * i) / (31 - 1)))) / 1.75}em;
-            white-space: nowrap;
-        "
+		<div class={activeProjectId ? 'hover-instructions hidden' : 'hover-instructions'}>
+			{#each { length: 31 } as _, i}
+				<h3
+					style="
+				font-size: {i === 15 ? 1.5 : 1}rem;
+				opacity: {i === 15 ? 1 : 1 - Math.abs(Math.sin((Math.PI * i) / (31 - 1)))};
+				letter-spacing: {(1 - Math.abs(Math.sin((Math.PI * i) / (31 - 1)))) / 1.75}em;
+				white-space: nowrap;
+			"
+				>
+					Hover over a project to see more details
+				</h3>
+			{/each}
+		</div>
+		{#each ['palace-guard', 'train-tracks', 'nxcro-store', 'project-management'] as projectId}
+			<div
+				id={`${projectId}-details`}
+				class="project-details"
+				class:active={activeProjectId === projectId}
 			>
-				Hover over a project to see more details
-			</h3>
+				>
+				{projectId}
+			</div>
 		{/each}
 	</Container>
 </Page>
@@ -61,5 +78,17 @@
 	}
 	h2 {
 		font-size: 1.5rem;
+	}
+	li {
+		cursor: crosshair;
+	}
+	.project-details {
+		display: none;
+	}
+	.project-details.active {
+		display: block;
+	}
+	.hover-instructions.hidden {
+		display: none;
 	}
 </style>
