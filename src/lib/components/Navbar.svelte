@@ -93,4 +93,8 @@
 		border: 2px solid #555;
 		z-index: -200;
 	}
+
+	a {
+		cursor: crosshair;
+	}
 </style>
