@@ -15,21 +15,15 @@
 		}
 	}
 
-	// create image size oject for each project
-	const projectImageSizes = {
-		'palace-guard': {
-			width: 460
-		},
-		'train-tracks': {
-			width: 280
-		},
-		'nxcro-hydrogen-store': {
-			width: 460
-		},
-		'project-management-platform': {
-			width: 460
-		}
+	type ProjectImageSizes = {
+		[key: string]: { width: number } | undefined;
 	};
+	const projectImageSizes = {
+		'palace-guard': { width: 460 },
+		'train-tracks': { width: 280 },
+		'nxcro-hydrogen-store': { width: 460 },
+		'project-management-platform': { width: 460 }
+	} as ProjectImageSizes;
 </script>
 
 <Page>
@@ -76,7 +70,7 @@
 					<img
 						src={`/projects/${projectId}.png`}
 						alt={projectId}
-						width={projectImageSizes[projectId].width}
+						width={projectImageSizes[projectId]?.width}
 					/>
 				</li>
 			{/each}
