@@ -4,6 +4,7 @@
 	import Container from '$lib/components/Container.svelte';
 	import Page from '$lib/components/Page.svelte';
 	import ScrollingContainer from '$lib/components/ScrollingContainer.svelte';
+	import { projectInfo } from '$lib/data/projects';
 
 	let activeProjectId = null as string | null;
 
@@ -14,47 +15,6 @@
 			console.log('Active Project ID:', activeProjectId); // Debugging line
 		}
 	}
-
-	type projectInfoType = {
-		[projectId: string]: {
-			image: {
-				width: number | undefined;
-			};
-			tags: string[];
-			links?: {
-				name: string;
-				url: string;
-			}[];
-		};
-	};
-	const projectInfo = {
-		'palace-guard': {
-			image: { width: 460 },
-			tags: ['React', 'ChatGPT', 'AI', 'Firebase Functions'],
-			links: [
-				{
-					name: 'Live Demo',
-					url: 'https://palace-guard.web.app/'
-				},
-				{
-					name: 'GitHub Repo',
-					url: 'https://github.com/morgan-sam/palace-guard'
-				}
-			]
-		},
-		'train-tracks': {
-			image: { width: 280 },
-			tags: ['React', 'Algorithms', 'BFS']
-		},
-		'nxcro-hydrogen-store': {
-			image: { width: 460 },
-			tags: ['React', 'Hydrogen', 'Shopify', 'Design']
-		},
-		'project-management-platform': {
-			image: { width: 460 },
-			tags: ['React', 'Node.js', 'Express', 'PostgreSQL']
-		}
-	} as projectInfoType;
 </script>
 
 <Page>
@@ -85,16 +45,13 @@
 						<li class="tag">{tag}</li>
 					{/each}
 				</ul>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quibusdam, voluptatum,
-					quia, quod voluptatem voluptate quos asperiores quas voluptatibus quidem doloribus.
-					Quisquam quibusdam, voluptatum, quia, quod voluptatem voluptate quos asperiores quas
-					voluptatibus quidem doloribus.
-				</p>
+				{#each projectInfo[projectId]['paragraphs'] || [] as paragraph}
+					<p>{paragraph}</p>
+				{/each}
 				<div class="link-container">
 					{#each projectInfo[projectId]['links'] || [] as link}
 						<button
-							class="bg-blue-900 text-white rounded-md px-6 py-2 text-xl"
+							class={link.name === 'GitHub Repo' ? 'secondary' : ''}
 							on:click={() => window.open(link.url)}
 						>
 							{link.name}
@@ -192,12 +149,13 @@
 	.link-container button:hover {
 		background-color: #2563eb;
 	}
-	.link-container button:nth-child(2) {
+
+	.link-container button.secondary {
 		background-color: transparent;
 		border: 2px solid #1e3a8a;
 		color: #1e3a8a;
 	}
-	.link-container button:nth-child(2):hover {
+	.link-container button.secondary:hover {
 		background-color: #2563eb;
 		border: 2px solid #2563eb;
 		color: #ffffff;
