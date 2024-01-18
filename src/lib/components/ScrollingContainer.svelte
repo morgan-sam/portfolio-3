@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	onMount(() => {
 		const scrollingContainer = document.querySelector('.scrolling-container');
-		scrollingContainer.scrollTop = 0;
+		if (scrollingContainer) scrollingContainer.scrollTop = 0;
 	});
 </script>
 

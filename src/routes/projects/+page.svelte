@@ -15,6 +15,8 @@
 			console.log('Active Project ID:', activeProjectId); // Debugging line
 		}
 	}
+
+	const projects = Object.keys(projectInfo);
 </script>
 
 <Page>
@@ -33,7 +35,7 @@
 				</h3>
 			{/each}
 		</div>
-		{#each ['palace-guard', 'train-tracks', 'nxcro-hydrogen-store', 'project-management-platform'] as projectId}
+		{#each projects as projectId}
 			<div
 				id={`${projectId}-details`}
 				class="project-details"
@@ -58,6 +60,15 @@
 						</button>
 					{/each}
 				</div>
+				<!-- check if /details/${projectId}.png exists -->
+
+				<img
+					src={`/details/${projectId}.png`}
+					alt={projectId}
+					on:error={(e) => {
+						if (e.target instanceof HTMLImageElement) e.target.style.display = 'none';
+					}}
+				/>
 			</div>
 		{/each}
 	</Container>
@@ -67,7 +78,7 @@
 	</div>
 	<Container delay={250}>
 		<ScrollingContainer>
-			{#each ['palace-guard', 'train-tracks', 'nxcro-hydrogen-store', 'project-management-platform'] as projectId}
+			{#each projects as projectId}
 				<li
 					id={projectId}
 					class="project-card"
@@ -134,7 +145,7 @@
 	.link-container {
 		display: flex;
 		gap: 10px;
-		margin-top: 20px;
+		margin: 20px 0;
 	}
 
 	.link-container button {
