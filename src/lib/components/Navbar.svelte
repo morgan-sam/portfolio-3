@@ -97,4 +97,10 @@
 	a {
 		cursor: crosshair;
 	}
+
+	@media (max-width: 1400px) {
+		.navbar {
+			display: none;
+		}
+	}
 </style>

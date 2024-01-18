@@ -24,4 +24,13 @@
 		line-height: 56px;
 		color: #333333;
 	}
+	@media (max-width: 1400px) {
+		.title {
+			position: relative;
+			transform: translate(0, 0);
+			top: 30px;
+			left: 30px;
+			line-height: 70px;
+		}
+	}
 </style>

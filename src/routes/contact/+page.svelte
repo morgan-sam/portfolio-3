@@ -1,10 +1,10 @@
 <script>
-	import Ball from '$lib/components/Ball.svelte';
-	import Title from '$lib/components/Title.svelte';
 	import Page from '$lib/components/Page.svelte';
 	import Container from '$lib/components/Container.svelte';
 	import { dev } from '$app/environment';
 	import ThankYou from '$lib/components/ThankYou.svelte';
+	import DecorativePanel from '$lib/components/DecorativePanel.svelte';
+	let contactTitle = 'Contact'; // Make sure this variable has the value you want to pass
 </script>
 
 <Page>
@@ -13,10 +13,7 @@
 			<ThankYou />
 		</h3>
 	</Container>
-	<div class="w-full h-full relative">
-		<Title class="top-[27%]">Contact</Title>
-		<Ball />
-	</div>
+	<DecorativePanel title={'Contact'} />
 	<Container delay={250}>
 		<div class="mx-auto mb-8 text-center">
 			<h2>Email me at:</h2>

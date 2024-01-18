@@ -1,10 +1,9 @@
 <script lang="ts">
-	import Ball from '$lib/components/Ball.svelte';
-	import Title from '$lib/components/Title.svelte';
 	import Container from '$lib/components/Container.svelte';
 	import Page from '$lib/components/Page.svelte';
 	import ScrollingContainer from '$lib/components/ScrollingContainer.svelte';
 	import { projectInfo } from '$lib/data/projects';
+	import DecorativePanel from '$lib/components/DecorativePanel.svelte';
 
 	let activeProjectId = null as string | null;
 
@@ -72,10 +71,7 @@
 			</div>
 		{/each}
 	</Container>
-	<div class="w-full h-full relative">
-		<Title class="top-[27%]">Projects</Title>
-		<Ball />
-	</div>
+	<DecorativePanel title="Projects" />
 	<Container delay={250}>
 		<ScrollingContainer>
 			{#each projects as projectId}

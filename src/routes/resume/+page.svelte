@@ -1,8 +1,7 @@
 <script>
-	import Ball from '$lib/components/Ball.svelte';
-	import Title from '$lib/components/Title.svelte';
 	import Container from '$lib/components/Container.svelte';
 	import Page from '$lib/components/Page.svelte';
+	import DecorativePanel from '$lib/components/DecorativePanel.svelte';
 </script>
 
 <Page>
@@ -56,10 +55,7 @@
 			</p>
 		</li>
 	</Container>
-	<div class="w-full h-full relative">
-		<Title class="top-[27%]">Resume</Title>
-		<Ball />
-	</div>
+	<DecorativePanel title={'Resume'} />
 	<Container delay={250} gap={'30px'}>
 		<li><h2>Client Testimonials</h2></li>
 		<li>
