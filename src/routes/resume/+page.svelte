@@ -35,9 +35,9 @@
 				<h3>2021 - 2022</h3>
 			</div>
 			<p>
-				Developed and maintained the BlockFi website, including the application process, blog, and
-				landing pages. Worked with the marketing team to create new pages and features to increase
-				conversion rates.
+				Developed and maintained the frontend of BlockFi's credit card app, including the
+				application, rewards, and dashboard pages. Worked with the marketing team to implement AB
+				tests and tracking.
 			</p>
 		</li>
 		<li>
@@ -47,9 +47,12 @@
 			</div>
 			<p>
 				Worked with clients to create websites and applications to meet their needs. Developed
-				websites and applications using React, Node, and MongoDB. Worked with clients to create
-				websites and applications to meet their needs. Developed websites and applications using
-				React, Node, and MongoDB.
+				NextJS Shopify apps, fullstack MERN/PERN applications, Shopify Hydrogen stores and React
+				frontend applications.
+			</p>
+			<p>
+				Experienced in both using Figma for UI/UX design and independently creating websites from
+				concept to launch.
 			</p>
 		</li>
 	</Container>
