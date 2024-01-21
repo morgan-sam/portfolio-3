@@ -47,4 +47,13 @@
 			opacity: 1;
 		}
 	}
+
+	/* max width 1400 */
+	@media (max-width: 1400px) {
+		.container,
+		.container:last-child {
+			text-align: left;
+			align-items: start;
+		}
+	}
 </style>
