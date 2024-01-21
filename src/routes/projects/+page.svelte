@@ -40,28 +40,35 @@
 				class="project-details"
 				class:active={activeProjectId === projectId}
 			>
-				<h2 class="project-title">{projectId}</h2>
-				<ul class="tags-container">
-					{#each projectInfo[projectId]['tags'] as tag}
-						<li class="tag">{tag}</li>
-					{/each}
-				</ul>
-				{#each projectInfo[projectId]['paragraphs'] || [] as paragraph}
-					<p>{paragraph}</p>
-				{/each}
-				<div class="link-container">
-					{#each projectInfo[projectId]['links'] || [] as link}
-						<button
-							class={link.name === 'GitHub Repo' ? 'secondary' : ''}
-							on:click={() => window.open(link.url)}
-						>
-							{link.name}
-						</button>
-					{/each}
-				</div>
-				<!-- check if /details/${projectId}.png exists -->
-
 				<img
+					class="main-image"
+					src={`/projects/${projectId}.png`}
+					alt={projectId}
+					width={projectInfo[projectId]['image']?.width}
+				/>
+				<div class="details-text">
+					<h2 class="project-title">{projectId}</h2>
+					<ul class="tags-container">
+						{#each projectInfo[projectId]['tags'] as tag}
+							<li class="tag">{tag}</li>
+						{/each}
+					</ul>
+					{#each projectInfo[projectId]['paragraphs'] || [] as paragraph}
+						<p>{paragraph}</p>
+					{/each}
+					<div class="link-container">
+						{#each projectInfo[projectId]['links'] || [] as link}
+							<button
+								class={link.name === 'GitHub Repo' ? 'secondary' : ''}
+								on:click={() => window.open(link.url)}
+							>
+								{link.name}
+							</button>
+						{/each}
+					</div>
+				</div>
+				<img
+					class="details-image"
 					src={`/details/${projectId}.png`}
 					alt={projectId}
 					on:error={(e) => {
@@ -72,7 +79,7 @@
 		{/each}
 	</Container>
 	<DecorativePanel title="Projects" />
-	<Container delay={250}>
+	<Container class="project-selection" delay={250}>
 		<ScrollingContainer>
 			{#each projects as projectId}
 				<li
@@ -116,6 +123,9 @@
 	}
 	.project-details.active {
 		display: block;
+	}
+	.project-details .main-image {
+		display: none;
 	}
 	.hover-instructions.hidden {
 		display: none;
@@ -166,5 +176,23 @@
 		background-color: #2563eb;
 		border: 2px solid #2563eb;
 		color: #ffffff;
+	}
+
+	/* max width 1400 */
+	@media (max-width: 1400px) {
+		.hover-instructions {
+			display: none;
+		}
+		.project-details {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+		.project-details .main-image {
+			display: block;
+		}
+		.project-details .details-image {
+			max-width: 400px;
+			width: 100%;
+		}
 	}
 </style>

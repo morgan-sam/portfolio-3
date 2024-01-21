@@ -22,9 +22,10 @@
 	@media (max-width: 1400px) {
 		.page {
 			width: 100%;
-			height: 100%;
-			grid-template-columns: unset;
-			grid-template-rows: repeat(var(--columns), minmax(0, 1fr));
+			height: fit-content;
+			display: flex;
+			flex-direction: column;
+			gap: 50px;
 		}
 		.page > slot::slotted(div:first-child + div) {
 			border: 10px solid red;

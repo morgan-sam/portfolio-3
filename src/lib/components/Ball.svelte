@@ -1,5 +1,7 @@
 <script lang="ts">
 	import '@simonwep/pickr/dist/themes/nano.min.css'; // 'nano' theme
+
+	export const absolute = false;
 	// import Pickr from '@simonwep/pickr';
 	// const pickr = Pickr.create({
 	// 	el: '.color-picker',
@@ -72,7 +74,7 @@
 </script>
 
 <!-- Your HTML code with correct binding syntax -->
-<div class="ball-parent absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+<div class="ball-parent">
 	<div class="ground absolute w-full h-full mix-blend-multiply">
 		<div
 			class="ground-shadow rounded-full"
@@ -139,6 +141,13 @@
 	.ball-parent {
 		animation: scaleAnimation 60s ease-in-out infinite;
 	} */
+
+	.ball-parent {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 	.ground {
 		bottom: -1%;
 		left: 55%;
@@ -170,5 +179,12 @@
 	}
 	.ball-color {
 		background: radial-gradient(circle at 67% 30%, rgb(255, 229, 185), rgb(24, 5, 8));
+	}
+
+	/* max width 1400 */
+	@media (max-width: 1400px) {
+		.ball-parent {
+			/* position: relative; */
+		}
 	}
 </style>

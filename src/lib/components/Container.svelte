@@ -1,10 +1,16 @@
 <script>
+	import { page } from '$app/stores';
+
 	export let delay = 0; // Default number of columns
 	export let gap = '0px'; // Default number of columns
 	export let style = '';
+	$: route = $page.url.pathname.replace('/', '') || '';
 </script>
 
-<div class="container slide-up" style="animation-delay: {delay}ms; gap: {gap}; {style}">
+<div
+	class="{$$restProps.class || ''} {route} container slide-up"
+	style="animation-delay: {delay}ms; gap: {gap}; {style}"
+>
 	<slot />
 </div>
 
@@ -54,6 +60,14 @@
 		.container:last-child {
 			text-align: left;
 			align-items: start;
+		}
+		.container {
+			height: fit-content;
+			justify-content: flex-start;
+			max-height: max-content;
+		}
+		.projects.container:last-child {
+			display: none;
 		}
 	}
 </style>
