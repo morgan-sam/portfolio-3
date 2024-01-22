@@ -124,6 +124,8 @@
 			align-items: flex-start;
 			gap: 0;
 		}
+	}
+	@media (max-width: 1000px) {
 		.testimonial h3 {
 			text-align: right;
 		}
