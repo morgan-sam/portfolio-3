@@ -66,8 +66,20 @@
 			justify-content: flex-start;
 			max-height: max-content;
 		}
+		.projects.container {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 100px !important;
+		}
 		.projects.container:last-child {
 			display: none;
+		}
+	}
+	@media (max-width: 1000px) {
+		.projects.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
 	}
 </style>

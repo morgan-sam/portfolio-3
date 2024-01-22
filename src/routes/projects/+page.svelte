@@ -186,13 +186,21 @@
 		.project-details {
 			display: flex;
 			flex-direction: column-reverse;
+			max-width: 500px;
 		}
 		.project-details .main-image {
 			display: block;
+			grid-area: 1 / 2 / 3 / 3;
 		}
 		.project-details .details-image {
 			max-width: 400px;
 			width: 100%;
+		}
+	}
+	@media (max-width: 1000px) {
+		.project-details {
+			display: flex;
+			flex-direction: column-reverse;
 		}
 	}
 </style>
