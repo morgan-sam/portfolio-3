@@ -136,6 +136,8 @@
 
 	.project-title {
 		font-size: 2.5rem;
+		line-height: 2.5rem;
+		margin: 0.7rem 0;
 	}
 	.tags-container {
 		display: flex;
