@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {},
 		fontFamily: {
-			calistoga: ['Calistoga', 'cursive']
+			calistoga: ['Calistoga', 'sans-serif']
 		}
 	},
 	plugins: []

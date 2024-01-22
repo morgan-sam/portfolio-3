@@ -212,7 +212,7 @@
 		.projects-list-break {
 			display: block;
 			font-size: 1.5rem;
-			font-family: 'Calistoga', cursive;
+			font-family: 'Calistoga', sans-serif;
 		}
 	}
 </style>

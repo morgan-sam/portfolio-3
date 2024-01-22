@@ -17,7 +17,7 @@
 		align-items: center;
 		height: 100vh;
 		max-height: 85%;
-		font-family: 'Calistoga', cursive;
+		font-family: 'Calistoga', sans-serif;
 	}
 
 	/* max width 1400 */
