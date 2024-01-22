@@ -76,6 +76,9 @@
 					}}
 				/>
 			</div>
+			{#if projectId !== projects[projects.length - 1]}
+				<span class="projects-list-break">↡</span>
+			{/if}
 		{/each}
 	</Container>
 	<DecorativePanel title="Projects" />
@@ -178,6 +181,10 @@
 		color: #ffffff;
 	}
 
+	.projects-list-break {
+		display: none;
+	}
+
 	/* max width 1400 */
 	@media (max-width: 1400px) {
 		.hover-instructions {
@@ -201,6 +208,11 @@
 		.project-details {
 			display: flex;
 			flex-direction: column-reverse;
+		}
+		.projects-list-break {
+			display: block;
+			font-size: 1.5rem;
+			font-family: 'Calistoga', cursive;
 		}
 	}
 </style>
