@@ -4,7 +4,6 @@
 	import { dev } from '$app/environment';
 	import ThankYou from '$lib/components/ThankYou.svelte';
 	import DecorativePanel from '$lib/components/DecorativePanel.svelte';
-	let contactTitle = 'Contact'; // Make sure this variable has the value you want to pass
 </script>
 
 <Page>

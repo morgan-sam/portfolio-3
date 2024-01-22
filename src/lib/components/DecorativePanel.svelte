@@ -22,8 +22,8 @@
 	@media (max-width: 1400px) {
 		.decorative-panel {
 			order: -1;
-			height: 400px;
-			margin-top: 150px;
+			height: 300px;
+			margin-top: 200px;
 		}
 	}
 </style>

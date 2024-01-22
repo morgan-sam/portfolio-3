@@ -74,6 +74,9 @@
 		.projects.container:last-child {
 			display: none;
 		}
+		.contact.container:first-child {
+			display: none;
+		}
 	}
 	@media (max-width: 1000px) {
 		.projects.container {
