@@ -139,6 +139,7 @@
 	}
 	.tags-container {
 		display: flex;
+		flex-wrap: wrap;
 	}
 	.tag {
 		background: #555;
@@ -146,6 +147,9 @@
 		padding: 5px 10px;
 		margin: 5px;
 		border-radius: 5px;
+		height: min-content;
+		width: min-content;
+		white-space: nowrap;
 	}
 	p {
 		margin: 20px 0;
