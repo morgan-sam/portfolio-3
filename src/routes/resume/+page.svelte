@@ -58,7 +58,7 @@
 	<DecorativePanel title={'Resume'} />
 	<Container delay={250} gap={'30px'}>
 		<li><h2>Client Testimonials</h2></li>
-		<li>
+		<li class="testimonial">
 			<p>
 				"Overall this is literally one of the best results I've seen from a developer - super
 				frictionless experience and you understood the task perfectly. I really appreciate you, keep
@@ -66,11 +66,11 @@
 			</p>
 			<h3>- Nico Aguirre, Trena Digital</h3>
 		</li>
-		<li>
+		<li class="testimonial">
 			<p>"Speedy, reliable and great work. Will be working with Sam in the future again soon!"</p>
 			<h3>- Luke Rourke, LPC IT Design</h3>
 		</li>
-		<li>
+		<li class="testimonial">
 			<p>
 				"As always an amazing job, have worked with him many times. Always get the job done and on
 				time."
@@ -116,5 +116,16 @@
 	.contribution-link {
 		color: rgb(104, 104, 192);
 		text-decoration: underline;
+	}
+	/* max width 1400 */
+	@media (max-width: 1400px) {
+		.job-title {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0;
+		}
+		.testimonial h3 {
+			text-align: right;
+		}
 	}
 </style>
