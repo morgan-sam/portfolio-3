@@ -24,7 +24,6 @@
 		align-items: start;
 		justify-content: center;
 		z-index: 100;
-		background-color: white;
 		box-sizing: border-box;
 		max-height: 100vh;
 		overflow: hidden;
@@ -65,6 +64,7 @@
 			height: fit-content;
 			justify-content: flex-start;
 			max-height: max-content;
+			background-color: white;
 		}
 		.projects.container {
 			display: grid;
