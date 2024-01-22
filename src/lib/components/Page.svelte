@@ -26,6 +26,7 @@
 			display: flex;
 			flex-direction: column;
 			gap: 50px;
+			padding: 0 20px;
 		}
 		.page > slot::slotted(div:first-child + div) {
 			border: 10px solid red;
