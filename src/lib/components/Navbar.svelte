@@ -103,6 +103,9 @@
 	a {
 		cursor: crosshair;
 	}
+	.mobile-nav {
+		display: none;
+	}
 
 	@media (max-width: 1400px) {
 		.navbar {
