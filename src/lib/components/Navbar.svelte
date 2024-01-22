@@ -56,6 +56,12 @@
 	</ul>
 	<div class="grid-border" />
 </nav>
+<nav class="mobile-nav">
+	<a href="/" class="navlink" class:active={$page.url.pathname === '/'}>Home</a>
+	<a href="/resume" class="navlink" class:active={$page.url.pathname === '/resume'}>Resume</a>
+	<a href="/projects" class="navlink" class:active={$page.url.pathname === '/projects'}>Projects</a>
+	<a href="/contact" class="navlink" class:active={$page.url.pathname === '/contact'}>Contact</a>
+</nav>
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000');
@@ -101,6 +107,17 @@
 	@media (max-width: 1400px) {
 		.navbar {
 			display: none;
+		}
+		.mobile-nav {
+			position: fixed;
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			text-align: center;
+			padding: 20px;
+			font-family: 'Calistoga', cursive;
+			background: white;
+			z-index: 1000;
 		}
 	}
 </style>

@@ -23,7 +23,7 @@
 		.decorative-panel {
 			order: -1;
 			height: 400px;
-			margin-top: 100px;
+			margin-top: 150px;
 		}
 	}
 </style>

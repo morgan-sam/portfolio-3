@@ -77,6 +77,7 @@
 	}
 	@media (max-width: 1000px) {
 		.projects.container {
+			gap: 0px !important;
 			display: flex;
 			flex-direction: column;
 			align-items: center;

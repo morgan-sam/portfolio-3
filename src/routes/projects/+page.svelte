@@ -213,6 +213,7 @@
 			display: block;
 			font-size: 1.5rem;
 			font-family: 'Calistoga', sans-serif;
+			margin: 5rem 0;
 		}
 	}
 </style>
