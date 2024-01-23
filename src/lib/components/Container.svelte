@@ -1,35 +1,43 @@
 <script>
 	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
+	onMount(() => {
+		const scrollingContainer = document.querySelector('.scrolling-container');
+		if (scrollingContainer) scrollingContainer.scrollTop = 0;
+	});
 
 	export let delay = 0; // Default number of columns
 	export let gap = '0px'; // Default number of columns
 	export let style = '';
+	export let scrolling = false;
 	$: route = $page.url.pathname.replace('/', '') || '';
+	console.log(scrolling);
 </script>
 
 <div
-	class="{$$restProps.class || ''} {route} container slide-up"
+	class="{$$restProps.class || ''} {route}  {scrolling
+		? 'scrolling-container'
+		: 'container slide-up '}"
 	style="animation-delay: {delay}ms; gap: {gap}; {style}"
 >
-	<slot />
+	<div class="container-inner">
+		<slot />
+	</div>
 </div>
 
 <style>
 	.container {
 		width: 100%;
 		height: 100%;
-		/* margin-left: 20%; */
 		display: flex;
 		flex-direction: column;
 		align-items: start;
-		justify-content: center;
 		z-index: 100;
 		box-sizing: border-box;
 		max-height: 100vh;
 		overflow: hidden;
 		transform: translateY(20px);
 		opacity: 0;
-		/* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
 	}
 
 	.container:last-child {
@@ -37,8 +45,43 @@
 		align-items: end;
 	}
 
+	.container-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		width: 100%;
+		height: fit-content;
+		margin: auto;
+		gap: 30px;
+	}
+
 	.slide-up {
 		animation: slideUp 0.5s cubic-bezier(0, 0.99, 0.42, 0.99) forwards;
+	}
+
+	.scrolling-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: end;
+		max-height: 100%;
+		overflow-y: scroll;
+		z-index: 2000;
+		gap: 10px;
+	}
+
+	.scrolling-container::-webkit-scrollbar-track {
+		/* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+		background-color: #f5f5f5;
+	}
+
+	.scrolling-container::-webkit-scrollbar {
+		width: 10px;
+		background-color: #f5f5f5;
+	}
+
+	.scrolling-container::-webkit-scrollbar-thumb {
+		background-color: #f5f5f5;
+		border: 2px solid #555555;
 	}
 
 	/* Keyframes for the slide-up animation */
@@ -66,20 +109,23 @@
 			max-height: max-content;
 			background-color: white;
 		}
-		.projects.container {
+		.projects.scrolling-container .container-inner {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			gap: 100px !important;
 		}
-		.projects.container:last-child {
+		.projects.scrolling-container:last-child {
 			display: none;
 		}
 		.contact.container:first-child {
 			display: none;
 		}
+		.contact.container .container-inner {
+			gap: 0;
+		}
 	}
 	@media (max-width: 1000px) {
-		.projects.container {
+		.projects.scrolling-container .container-inner {
 			gap: 0px !important;
 			display: flex;
 			flex-direction: column;

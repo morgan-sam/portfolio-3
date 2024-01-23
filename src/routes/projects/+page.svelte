@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Container from '$lib/components/Container.svelte';
 	import Page from '$lib/components/Page.svelte';
-	import ScrollingContainer from '$lib/components/ScrollingContainer.svelte';
 	import { projectInfo } from '$lib/data/projects';
 	import DecorativePanel from '$lib/components/DecorativePanel.svelte';
 
@@ -82,24 +81,22 @@
 		{/each}
 	</Container>
 	<DecorativePanel title="Projects" />
-	<Container class="project-selection" delay={250}>
-		<ScrollingContainer>
-			{#each projects as projectId}
-				<li
-					id={projectId}
-					class="project-card"
-					on:mouseover={projectMouseOver}
-					on:focus={projectMouseOver}
-				>
-					<h2>{projectId}</h2>
-					<img
-						src={`/projects/${projectId}.png`}
-						alt={projectId}
-						width={projectInfo[projectId]['image']?.width}
-					/>
-				</li>
-			{/each}
-		</ScrollingContainer>
+	<Container class="project-selection" delay={250} scrolling={true}>
+		{#each projects as projectId}
+			<li
+				id={projectId}
+				class="project-card"
+				on:mouseover={projectMouseOver}
+				on:focus={projectMouseOver}
+			>
+				<h2>{projectId}</h2>
+				<img
+					src={`/projects/${projectId}.png`}
+					alt={projectId}
+					width={projectInfo[projectId]['image']?.width}
+				/>
+			</li>
+		{/each}
 	</Container>
 </Page>
 
@@ -219,7 +216,7 @@
 			display: block;
 			font-size: 1.5rem;
 			font-family: 'Calistoga', sans-serif;
-			margin: 5rem 0;
+			margin: 5rem auto;
 		}
 	}
 </style>
