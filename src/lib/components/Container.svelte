@@ -109,7 +109,7 @@
 			max-height: max-content;
 			background-color: white;
 		}
-		.projects.scrolling-container .container-inner {
+		.projects.container .container-inner {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			gap: 100px !important;
@@ -125,7 +125,7 @@
 		}
 	}
 	@media (max-width: 1000px) {
-		.projects.scrolling-container .container-inner {
+		.projects.container .container-inner {
 			gap: 0px !important;
 			display: flex;
 			flex-direction: column;
