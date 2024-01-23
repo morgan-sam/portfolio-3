@@ -4,8 +4,8 @@
 </script>
 
 <Page columns={1}>
-	<div class="relative">
-		<div class="title">
+	<div class="home-title-container">
+		<div class="home-title">
 			<h1>Sam Morgan</h1>
 			<h2 class="text-6xl">Fullstack Developer</h2>
 		</div>
@@ -14,7 +14,10 @@
 </Page>
 
 <style>
-	.title {
+	.home-title-container {
+		position: relative;
+	}
+	.home-title {
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -25,12 +28,18 @@
 		color: #333333;
 	}
 	@media (max-width: 1400px) {
-		.title {
+		.home-title {
 			position: relative;
 			transform: translate(0, 0);
 			top: 30px;
 			left: 30px;
 			line-height: 70px;
+		}
+		h1 {
+			margin-bottom: 22rem;
+		}
+		h2 {
+			margin-bottom: 3rem;
 		}
 	}
 </style>

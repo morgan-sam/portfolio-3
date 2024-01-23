@@ -11,7 +11,6 @@
 	export let style = '';
 	export let scrolling = false;
 	$: route = $page.url.pathname.replace('/', '') || '';
-	console.log(scrolling);
 </script>
 
 <div

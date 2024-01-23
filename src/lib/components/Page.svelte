@@ -1,11 +1,11 @@
 <script>
+	import { page } from '$app/stores';
 	export let columns = 3; // Default number of columns
-
-	// Reactive declaration to set the CSS variable
 	$: style = `--columns: ${columns};`;
+	$: route = ($page.url.pathname === '/' ? 'home' : $page.url.pathname.replace('/', '')) || '';
 </script>
 
-<div class="page" {style}>
+<div class="page {route}" {style}>
 	<slot />
 </div>
 
@@ -30,6 +30,9 @@
 		}
 		.page > slot::slotted(div:first-child + div) {
 			border: 10px solid red;
+		}
+		.page.home {
+			height: 100vh;
 		}
 	}
 </style>
