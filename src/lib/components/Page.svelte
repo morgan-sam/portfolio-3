@@ -34,5 +34,8 @@
 		.page.home {
 			height: 100vh;
 		}
+		.page.resume {
+			gap: 100px;
+		}
 	}
 </style>
