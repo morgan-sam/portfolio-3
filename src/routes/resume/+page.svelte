@@ -34,9 +34,8 @@
 				<h3>2021 - 2022</h3>
 			</div>
 			<p>
-				Developed and maintained the frontend of BlockFi's credit card app, including the
-				application, rewards, and dashboard pages. Worked with the marketing team to implement AB
-				tests and tracking.
+				Developed and maintained the frontend of BlockFi's credit card app, which had 60,000+ active
+				users. Worked with the marketing team to implement AB tests and tracking.
 			</p>
 		</li>
 		<li>
@@ -45,13 +44,9 @@
 				<h3>2022 - Present</h3>
 			</div>
 			<p>
-				Worked with clients to create websites and applications to meet their needs. Developed
-				NextJS Shopify apps, fullstack MERN/PERN applications, Shopify Hydrogen stores and React
-				frontend applications.
-			</p>
-			<p>
-				Experienced in both using Figma for UI/UX design and independently creating websites from
-				concept to launch.
+				Worked with clients to create/design/develop websites and applications to meet their needs.
+				Developed NextJS Shopify apps, fullstack MERN/PERN applications, Shopify Hydrogen stores and
+				React frontend applications.
 			</p>
 		</li>
 		<!-- link to full resume -->
