@@ -54,6 +54,16 @@
 				concept to launch.
 			</p>
 		</li>
+		<!-- link to full resume -->
+		<li>
+			<a
+				class="resume-link"
+				href="https://docs.google.com/document/d/1pmVzgXfb-7HI-v5jELQV7r0TQPTy2AloCxadlO4fHKk"
+				target="_blank"
+			>
+				<h4>Full Resume</h4>
+			</a>
+		</li>
 	</Container>
 	<DecorativePanel title={'Resume'} />
 	<Container delay={250} gap={'30px'}>
@@ -113,7 +123,8 @@
 		font-weight: 400;
 		font-family: 'DM Sans', sans-serif;
 	}
-	.contribution-link {
+	.contribution-link,
+	.resume-link {
 		color: rgb(104, 104, 192);
 		text-decoration: underline;
 	}
