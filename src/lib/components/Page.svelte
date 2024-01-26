@@ -27,12 +27,14 @@
 			flex-direction: column;
 			gap: 50px;
 			padding: 0 20px;
+			margin-bottom: 100px;
 		}
 		.page > slot::slotted(div:first-child + div) {
 			border: 10px solid red;
 		}
 		.page.home {
 			height: 100vh;
+			margin-bottom: 0;
 		}
 		.page.resume {
 			gap: 100px;
