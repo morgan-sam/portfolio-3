@@ -70,19 +70,11 @@
 		width: 150%;
 		height: 75%;
 		border-radius: 100%;
-		background: radial-gradient(ellipse at 70%, rgb(31, 30, 30), rgba(75, 75, 75, 0)),
-			url('$lib/images/noise.svg');
-		transform: translate(calc(-50% + 180px), calc(-50% + 20px)) rotate(-203deg);
-		filter: contrast(150%) brightness(700%);
 	}
 
 	.ball-shadow {
 		width: 100%;
 		height: 100%;
-		background: radial-gradient(ellipse at 40%, rgba(255, 255, 255, 0), rgb(43, 43, 82)),
-			url('$lib/images/noise.svg');
-		transform: rotate(40deg);
-		filter: contrast(150%) brightness(400%);
 	}
 
 	.ball-color {
@@ -91,9 +83,6 @@
 		width: 100%;
 		height: 100%;
 		mix-blend-mode: multiply;
-
-		background: radial-gradient(circle at 67% 30%, rgb(255, 229, 185), rgb(24, 5, 8));
-		transform: rotate(250deg);
 	}
 
 	/* Chrome-specific */
@@ -102,4 +91,25 @@
 			filter: contrast(150%) brightness(400%);
 		}
 	} */
+
+	@media (max-width: 1400px) {
+		.ground-shadow {
+			background: radial-gradient(ellipse at 70%, rgb(31, 30, 30), rgba(75, 75, 75, 0)),
+				url('/images/noise.svg') !important;
+			transform: translate(calc(-50% + 180px), calc(-50% + 20px)) rotate(-203deg) !important;
+			filter: contrast(150%) brightness(700%) !important;
+		}
+
+		.ball-shadow {
+			background: radial-gradient(ellipse at 40%, rgba(255, 255, 255, 0), rgb(43, 43, 82)),
+				url('/images/noise.svg') !important;
+			transform: rotate(40deg) !important;
+			filter: contrast(150%) brightness(400%) !important;
+		}
+
+		.ball-color {
+			background: radial-gradient(circle at 67% 30%, rgb(255, 229, 185), rgb(24, 5, 8)) !important;
+			transform: rotate(250deg) !important;
+		}
+	}
 </style>
