@@ -1,13 +1,58 @@
-<script>
+<script lang="ts">
+	import { ballStyles } from '$lib/stores/ballStyles'; // Import the store holding style configurations
+	import type { BallStyle } from '$lib/types'; // Import the type definition for BallStyles
+
 	import { page } from '$app/stores';
 	$: route = ($page.url.pathname === '/' ? 'home' : $page.url.pathname.replace('/', '')) || '';
+	// init currentStyles var and set typescript definition;
+	let currentStyles = {} as BallStyle;
+
+	// This reactive statement updates currentStyles based on the current page path
+	$: $page.url.pathname, setCurrentStyles();
+
+	// Updates the currentStyles based on the current route
+	function setCurrentStyles() {
+		ballStyles.subscribe((styles) => {
+			// Assuming the path is like '/home', '/resume', etc.
+			const path = $page.url.pathname.split('/')[1] || 'home'; // Default to 'home' if path is not found
+			let shadowPosition: 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight';
+			switch (path) {
+				case 'home':
+					shadowPosition = 'topLeft';
+					break;
+				case 'resume':
+					shadowPosition = 'topRight';
+					break;
+				case 'projects':
+					shadowPosition = 'bottomLeft';
+					break;
+				case 'contact':
+					shadowPosition = 'bottomRight';
+					break;
+				default:
+					shadowPosition = 'topRight';
+			}
+
+			currentStyles = styles[shadowPosition]; // Update currentStyles based on the current route
+		})();
+	}
 </script>
 
 <div class="ball-parent {route}">
-	<div class="ground-shadow rounded-full" />
+	<div
+		class="ground-shadow"
+		style={`background: ${currentStyles.groundShadow.background}; transform: ${currentStyles.groundShadow.transform}; filter: ${currentStyles.groundShadow.filter};`}
+	/>
+
 	<div class="ball w-72 h-72 relative isolate rounded-full overflow-hidden">
-		<div class="ball-shadow w-full h-full" />
-		<div class="ball-color mix-blend-multiply absolute top-0 w-full h-full" />
+		<div
+			class="ball-shadow"
+			style={`background: ${currentStyles.ballShadow.background}; transform: ${currentStyles.ballShadow.transform}; filter: ${currentStyles.ballShadow.filter};`}
+		/>
+		<div
+			class="ball-color"
+			style={`background: ${currentStyles.ballColor.background}; transform: ${currentStyles.ballColor.transform};`}
+		/>
 	</div>
 </div>
 
@@ -24,6 +69,7 @@
 		left: 50%;
 		width: 150%;
 		height: 75%;
+		border-radius: 100%;
 		background: radial-gradient(ellipse at 70%, rgb(31, 30, 30), rgba(75, 75, 75, 0)),
 			url('$lib/images/noise.svg');
 		transform: translate(calc(-50% + 180px), calc(-50% + 20px)) rotate(-203deg);
@@ -31,6 +77,8 @@
 	}
 
 	.ball-shadow {
+		width: 100%;
+		height: 100%;
 		background: radial-gradient(ellipse at 40%, rgba(255, 255, 255, 0), rgb(43, 43, 82)),
 			url('$lib/images/noise.svg');
 		transform: rotate(40deg);
@@ -38,6 +86,12 @@
 	}
 
 	.ball-color {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		mix-blend-mode: multiply;
+
 		background: radial-gradient(circle at 67% 30%, rgb(255, 229, 185), rgb(24, 5, 8));
 		transform: rotate(250deg);
 	}
@@ -48,82 +102,4 @@
 			filter: contrast(150%) brightness(400%);
 		}
 	} */
-
-	@media (min-width: 1400px) {
-		/* HOME PAGE */
-
-		.ball-parent.home .ground-shadow {
-			background: radial-gradient(ellipse at 70%, rgb(31, 30, 30), rgba(75, 75, 75, 0)),
-				url('$lib/images/noise.svg');
-			transform: translate(calc(-50% - 200px), calc(-50% + 30px)) rotate(20deg);
-			filter: contrast(150%) brightness(700%);
-		}
-		.ball-parent.home .ball-shadow {
-			background: radial-gradient(ellipse at 40%, rgba(255, 255, 255, 0), rgb(43, 43, 82)),
-				url('$lib/images/noise.svg');
-			transform: rotate(170deg);
-			filter: contrast(150%) brightness(400%);
-		}
-		.ball-parent.home .ball-color {
-			background: radial-gradient(circle at 67% 30%, rgb(255, 229, 185), rgb(24, 5, 8));
-			transform: rotate(50deg);
-		}
-
-		/* RESUME PAGE */
-
-		.ball-parent.resume .ground-shadow {
-			background: radial-gradient(ellipse at 70%, rgb(31, 30, 30), rgba(75, 75, 75, 0)),
-				url('$lib/images/noise.svg');
-			transform: translate(calc(-50% + 180px), calc(-50% + 20px)) rotate(-203deg);
-			filter: contrast(150%) brightness(700%);
-		}
-		.ball-parent.resume .ball-shadow {
-			background: radial-gradient(ellipse at 40%, rgba(255, 255, 255, 0), rgb(43, 43, 82)),
-				url('$lib/images/noise.svg');
-			transform: rotate(40deg);
-			filter: contrast(150%) brightness(400%);
-		}
-		.ball-parent.resume .ball-color {
-			background: radial-gradient(circle at 67% 30%, rgb(255, 229, 185), rgb(24, 5, 8));
-			transform: rotate(250deg);
-		}
-
-		/* PROJECTS PAGE */
-
-		.ball-parent.projects .ground-shadow {
-			background: radial-gradient(ellipse at 70%, rgb(31, 30, 30), rgba(75, 75, 75, 0)),
-				url(/src/lib/images/noise.svg);
-			transform: translate(calc(-50% - 124px), calc(-50% + 158px)) rotate(-30deg);
-			filter: contrast(200%) brightness(700%);
-		}
-		.ball-parent.projects .ball-shadow {
-			background: radial-gradient(ellipse at -5%, rgba(255, 255, 255, 0), rgb(43, 43, 82)),
-				url('/src/lib/images/noise.svg');
-			transform: rotate(130deg);
-			filter: contrast(150%) brightness(200%);
-		}
-		.ball-parent.projects .ball-color {
-			background: radial-gradient(circle at 67% 2%, rgb(255, 229, 185), rgb(24, 5, 8));
-			transform: rotate(30deg);
-		}
-
-		/* CONTACT PAGE */
-
-		.ball-parent.contact .ground-shadow {
-			background: radial-gradient(ellipse at 70%, rgb(31, 30, 30), rgba(75, 75, 75, 0)),
-				url(/src/lib/images/noise.svg);
-			transform: translate(calc(-50% + 140px), calc(-50% + 170px)) rotate(-150deg);
-			filter: contrast(200%) brightness(700%);
-		}
-		.ball-parent.contact .ball-shadow {
-			background: radial-gradient(ellipse at 27%, rgba(255, 255, 255, 0), rgb(43, 43, 82)),
-				url(/src/lib/images/noise.svg);
-			transform: rotate(50deg);
-			filter: contrast(150%) brightness(200%);
-		}
-		.ball-parent.contact .ball-color {
-			background: radial-gradient(circle at 5% 39%, rgb(255, 229, 185), rgb(24, 5, 8));
-			transform: rotate(30deg);
-		}
-	}
 </style>
