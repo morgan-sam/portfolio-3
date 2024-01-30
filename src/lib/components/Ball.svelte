@@ -54,7 +54,9 @@
 		/* HOME PAGE */
 
 		.ball-parent.home .ground-shadow {
-			transform: translate(calc(-50% - 200px), calc(-50% + 30px)) rotate(23deg);
+			width: 150%;
+			height: 75%;
+			transform: translate(calc(-50% - 200px), calc(-50% + 30px)) rotate(20deg);
 		}
 		.ball-parent.home .ball-shadow {
 			transform: rotate(-30deg);
@@ -66,7 +68,9 @@
 		/* RESUME PAGE */
 
 		.ball-parent.resume .ground-shadow {
-			transform: translate(calc(-50% + 200px), calc(-50% + 30px)) rotate(-203deg);
+			width: 150%;
+			height: 75%;
+			transform: translate(calc(-50% + 180px), calc(-50% + 20px)) rotate(-203deg);
 		}
 		.ball-parent.resume .ball-shadow {
 			transform: rotate(-160deg);
@@ -78,8 +82,8 @@
 		/* PROJECTS PAGE */
 
 		.ball-parent.projects .ground-shadow {
-			width: 143%;
-			height: 76%;
+			width: 150%;
+			height: 75%;
 			transform: translate(calc(-50% - 124px), calc(-50% + 158px)) rotate(-30deg);
 			background: radial-gradient(ellipse at 70%, rgb(31, 30, 30), rgba(75, 75, 75, 0)),
 				url(/src/lib/images/noise.svg);
@@ -99,8 +103,8 @@
 		/* CONTACT PAGE */
 
 		.ball-parent.contact .ground-shadow {
-			width: 143%;
-			height: 76%;
+			width: 150%;
+			height: 75%;
 			transform: translate(calc(-50% + 140px), calc(-50% + 170px)) rotate(-150deg);
 			filter: contrast(200%) brightness(700%);
 		}
