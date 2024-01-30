@@ -51,11 +51,7 @@
 		</li>
 		<!-- link to full resume -->
 		<li>
-			<a
-				class="resume-link"
-				href="https://docs.google.com/document/d/1pmVzgXfb-7HI-v5jELQV7r0TQPTy2AloCxadlO4fHKk"
-				target="_blank"
-			>
+			<a class="resume-link" href="/fullresume" target="_blank">
 				<h4>Full Resume</h4>
 			</a>
 		</li>
