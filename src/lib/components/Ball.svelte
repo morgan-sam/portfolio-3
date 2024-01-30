@@ -29,19 +29,17 @@
 		transform: translate(calc(-50% + 180px), calc(-50% + 20px)) rotate(-203deg);
 		filter: contrast(150%) brightness(700%);
 	}
-	.ball {
-		transform: rotate(200deg);
-	}
+
 	.ball-shadow {
 		background: radial-gradient(ellipse at 40%, rgba(255, 255, 255, 0), rgb(43, 43, 82)),
 			url('$lib/images/noise.svg');
-		transform: rotate(-160deg);
+		transform: rotate(40deg);
 		filter: contrast(150%) brightness(400%);
 	}
 
 	.ball-color {
 		background: radial-gradient(circle at 67% 30%, rgb(255, 229, 185), rgb(24, 5, 8));
-		transform: rotate(50deg);
+		transform: rotate(250deg);
 	}
 
 	/* Chrome-specific */
@@ -55,35 +53,39 @@
 		/* HOME PAGE */
 
 		.ball-parent.home .ground-shadow {
+			background: radial-gradient(ellipse at 70%, rgb(31, 30, 30), rgba(75, 75, 75, 0)),
+				url('$lib/images/noise.svg');
 			transform: translate(calc(-50% - 200px), calc(-50% + 30px)) rotate(20deg);
 			filter: contrast(150%) brightness(700%);
 		}
 		.ball-parent.home .ball-shadow {
 			background: radial-gradient(ellipse at 40%, rgba(255, 255, 255, 0), rgb(43, 43, 82)),
 				url('$lib/images/noise.svg');
-			transform: rotate(-30deg);
+			transform: rotate(170deg);
 			filter: contrast(150%) brightness(400%);
 		}
 		.ball-parent.home .ball-color {
 			background: radial-gradient(circle at 67% 30%, rgb(255, 229, 185), rgb(24, 5, 8));
-			transform: rotate(-150deg);
+			transform: rotate(50deg);
 		}
 
 		/* RESUME PAGE */
 
 		.ball-parent.resume .ground-shadow {
+			background: radial-gradient(ellipse at 70%, rgb(31, 30, 30), rgba(75, 75, 75, 0)),
+				url('$lib/images/noise.svg');
 			transform: translate(calc(-50% + 180px), calc(-50% + 20px)) rotate(-203deg);
 			filter: contrast(150%) brightness(700%);
 		}
 		.ball-parent.resume .ball-shadow {
 			background: radial-gradient(ellipse at 40%, rgba(255, 255, 255, 0), rgb(43, 43, 82)),
 				url('$lib/images/noise.svg');
-			transform: rotate(-160deg);
+			transform: rotate(40deg);
 			filter: contrast(150%) brightness(400%);
 		}
 		.ball-parent.resume .ball-color {
 			background: radial-gradient(circle at 67% 30%, rgb(255, 229, 185), rgb(24, 5, 8));
-			transform: rotate(50deg);
+			transform: rotate(250deg);
 		}
 
 		/* PROJECTS PAGE */
@@ -97,29 +99,31 @@
 		.ball-parent.projects .ball-shadow {
 			background: radial-gradient(ellipse at -5%, rgba(255, 255, 255, 0), rgb(43, 43, 82)),
 				url('/src/lib/images/noise.svg');
-			transform: rotate(-73deg);
+			transform: rotate(130deg);
 			filter: contrast(150%) brightness(200%);
 		}
 		.ball-parent.projects .ball-color {
 			background: radial-gradient(circle at 67% 2%, rgb(255, 229, 185), rgb(24, 5, 8));
-			transform: rotate(190deg);
+			transform: rotate(30deg);
 		}
 
 		/* CONTACT PAGE */
 
 		.ball-parent.contact .ground-shadow {
+			background: radial-gradient(ellipse at 70%, rgb(31, 30, 30), rgba(75, 75, 75, 0)),
+				url(/src/lib/images/noise.svg);
 			transform: translate(calc(-50% + 140px), calc(-50% + 170px)) rotate(-150deg);
 			filter: contrast(200%) brightness(700%);
 		}
 		.ball-parent.contact .ball-shadow {
 			background: radial-gradient(ellipse at 27%, rgba(255, 255, 255, 0), rgb(43, 43, 82)),
 				url(/src/lib/images/noise.svg);
-			transform: rotate(-150deg);
+			transform: rotate(50deg);
 			filter: contrast(150%) brightness(200%);
 		}
 		.ball-parent.contact .ball-color {
 			background: radial-gradient(circle at 5% 39%, rgb(255, 229, 185), rgb(24, 5, 8));
-			transform: rotate(190deg);
+			transform: rotate(30deg);
 		}
 	}
 </style>
