@@ -3,13 +3,13 @@
 	import Navbar from '$lib/components/Navbar.svelte';
 	import { page } from '$app/stores';
 	$: route = ($page.url.pathname === '/' ? 'home' : $page.url.pathname.replace('/', '')) || '';
-	let lightsOn = true;
+	let lightsOn = false;
 </script>
 
 <!-- <div style="position: absolute; top: 0; left: 50%;">
 	{lightsOn ? 'checked' : 'unchecked'}
 </div> -->
-<div class="page-shadow {route}" style="opacity: {lightsOn ? 0.35 : 0}" />
+<div class="page-shadow {route}" style="opacity: {lightsOn ? 0 : 0.35}; transition: 0.5s;" />
 <Navbar />
 <div class="layout">
 	<slot />
