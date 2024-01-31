@@ -1,9 +1,12 @@
-<script>
+<script lang="ts">
 	import Page from '$lib/components/Page.svelte';
 	import Container from '$lib/components/Container.svelte';
 	import { dev } from '$app/environment';
 	import ThankYou from '$lib/components/ThankYou.svelte';
 	import DecorativePanel from '$lib/components/DecorativePanel.svelte';
+	import { getContext } from 'svelte';
+	import type { Writable } from 'svelte/store';
+	const lightsOn: Writable<boolean> = getContext('lightsOnContext');
 </script>
 
 <Page>

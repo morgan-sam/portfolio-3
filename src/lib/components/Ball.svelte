@@ -1,8 +1,12 @@
 <script lang="ts">
 	import { ballStyles } from '$lib/stores/ballStyles'; // Import the store holding style configurations
 	import type { BallStyle } from '$lib/types'; // Import the type definition for BallStyles
-
 	import { page } from '$app/stores';
+
+	import { getContext } from 'svelte';
+	import type { Writable } from 'svelte/store';
+	const lightsOn: Writable<boolean> = getContext('lightsOnContext');
+
 	$: route = ($page.url.pathname === '/' ? 'home' : $page.url.pathname.replace('/', '')) || '';
 	// init currentStyles var and set typescript definition;
 	let currentStyles = {} as BallStyle;
@@ -41,17 +45,26 @@
 <div class="ball-parent {route}">
 	<div
 		class="ground-shadow"
-		style={`background: ${currentStyles.groundShadow.background}; transform: ${currentStyles.groundShadow.transform}; filter: ${currentStyles.groundShadow.filter};`}
+		style={`background: ${currentStyles.groundShadow.background}; transform: ${
+			currentStyles.groundShadow.transform
+		}; filter: ${currentStyles.groundShadow.filter};
+		opacity: ${$lightsOn ? 0 : 1};`}
 	/>
 
 	<div class="ball w-72 h-72 relative isolate rounded-full overflow-hidden">
 		<div
 			class="ball-shadow"
-			style={`background: ${currentStyles.ballShadow.background}; transform: ${currentStyles.ballShadow.transform}; filter: ${currentStyles.ballShadow.filter};`}
+			style={`background: ${currentStyles.ballShadow.background}; transform: ${
+				currentStyles.ballShadow.transform
+			}; filter: ${currentStyles.ballShadow.filter};
+			opacity: ${$lightsOn ? 0.25 : 1};`}
 		/>
 		<div
 			class="ball-color"
-			style={`background: ${currentStyles.ballColor.background}; transform: ${currentStyles.ballColor.transform};`}
+			style={`background: ${currentStyles.ballColor.background}; transform: ${
+				currentStyles.ballColor.transform
+			};
+			filter: contrast(${$lightsOn ? 0.8 : 1});`}
 		/>
 	</div>
 </div>

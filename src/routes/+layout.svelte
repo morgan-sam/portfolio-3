@@ -1,15 +1,20 @@
-<script>
+<script lang="ts">
 	import '../app.css';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import { page } from '$app/stores';
+	import { writable } from 'svelte/store';
+	import type { Writable } from 'svelte/store';
+
+	import { setContext } from 'svelte';
 	$: route = ($page.url.pathname === '/' ? 'home' : $page.url.pathname.replace('/', '')) || '';
-	let lightsOn = false;
+	let lightsOn: Writable<boolean> = writable(false);
+	setContext('lightsOnContext', lightsOn);
 </script>
 
 <!-- <div style="position: absolute; top: 0; left: 50%;">
 	{lightsOn ? 'checked' : 'unchecked'}
 </div> -->
-<div class="page-shadow {route}" style="opacity: {lightsOn ? 0 : 0.35}; transition: 0.5s;" />
+<div class="page-shadow {route}" style="opacity: {$lightsOn ? 0 : 0.35}; transition: 0.5s;" />
 <Navbar />
 <div class="layout">
 	<slot />
@@ -18,8 +23,8 @@
 	<input
 		type="checkbox"
 		class="light-switch-checkbox"
-		on:change={() => (lightsOn = !lightsOn)}
-		checked={lightsOn}
+		on:change={() => lightsOn.set(!$lightsOn)}
+		checked={$lightsOn}
 	/>
 	<div class="light-switch-button" />
 	<div class="light-switch-background" />
