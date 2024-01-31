@@ -117,6 +117,7 @@
 				url('/images/noise.svg') !important;
 			transform: translate(calc(-50% + 180px), calc(-50% + 20px)) rotate(-203deg) !important;
 			filter: contrast(150%) brightness(700%) !important;
+			opacity: 1 !important;
 		}
 
 		.ball-shadow {
@@ -124,11 +125,13 @@
 				url('/images/noise.svg') !important;
 			transform: rotate(40deg) !important;
 			filter: contrast(150%) brightness(400%) !important;
+			opacity: 1 !important;
 		}
 
 		.ball-color {
 			background: radial-gradient(circle at 67% 30%, rgb(255, 229, 185), rgb(24, 5, 8)) !important;
 			transform: rotate(250deg) !important;
+			filter: contrast(1) !important;
 		}
 	}
 </style>

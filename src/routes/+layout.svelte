@@ -42,8 +42,8 @@
 		border: 1px solid #333333;
 		z-index: 100001;
 		transform: translateX(-50%);
-		width: 7rem;
-		height: 3rem;
+		width: 5rem;
+		height: 2.5rem;
 	}
 	.light-switch-background {
 		position: absolute;
@@ -55,6 +55,7 @@
 		background: #333333;
 		opacity: 0.5;
 		z-index: 0;
+		box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.95), inset 0 6px 20px 0 rgba(0, 0, 0, 0.9);
 	}
 	.light-switch-checkbox {
 		-webkit-appearance: none;
