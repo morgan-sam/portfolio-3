@@ -97,7 +97,8 @@
 	}
 	/* max width 1400px */
 	@media (max-width: 1400px) {
-		.page-shadow {
+		.page-shadow,
+		.light-switch-container {
 			display: none;
 		}
 	}
