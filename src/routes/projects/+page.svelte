@@ -102,7 +102,6 @@
 
 <style>
 	.project-card {
-		background: white;
 		padding: 15px;
 		margin: 10px;
 		z-index: 1000;
