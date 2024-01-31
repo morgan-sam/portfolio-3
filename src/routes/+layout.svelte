@@ -3,15 +3,83 @@
 	import Navbar from '$lib/components/Navbar.svelte';
 	import { page } from '$app/stores';
 	$: route = ($page.url.pathname === '/' ? 'home' : $page.url.pathname.replace('/', '')) || '';
+	let lightsOn = true;
 </script>
 
-<div class="page-shadow {route}" />
+<!-- <div style="position: absolute; top: 0; left: 50%;">
+	{lightsOn ? 'checked' : 'unchecked'}
+</div> -->
+<div class="page-shadow {route}" style="opacity: {lightsOn ? 0.35 : 0}" />
 <Navbar />
 <div class="layout">
 	<slot />
 </div>
+<div class="light-switch-container">
+	<input
+		type="checkbox"
+		class="light-switch-checkbox"
+		on:change={() => (lightsOn = !lightsOn)}
+		checked={lightsOn}
+	/>
+	<div class="light-switch-button" />
+	<div class="light-switch-background" />
+</div>
 
 <style>
+	.light-switch-container {
+		position: absolute;
+		bottom: 5rem;
+		left: 50%;
+		margin: 1rem;
+		padding: 0.5rem;
+		border-radius: 20px;
+		background: none;
+		border: 1px solid #333333;
+		z-index: 100001;
+		transform: translateX(-50%);
+		width: 7rem;
+		height: 3rem;
+	}
+	.light-switch-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 20px;
+		background: #333333;
+		opacity: 0.5;
+		z-index: 0;
+	}
+	.light-switch-checkbox {
+		-webkit-appearance: none;
+		appearance: none;
+		position: absolute;
+		z-index: 1;
+		border-radius: inherit;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		cursor: pointer;
+		z-index: 2;
+	}
+	.light-switch-button {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50%;
+		height: 100%;
+		border-radius: 20px;
+		background: white;
+		transition: 0.2s;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+	}
+	.light-switch-checkbox:checked + .light-switch-button {
+		left: 50%;
+		background: #141313;
+	}
+
 	.page-shadow {
 		display: block;
 		top: 0;
