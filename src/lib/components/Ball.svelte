@@ -18,16 +18,16 @@
 			let shadowPosition: 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight';
 			switch (path) {
 				case 'home':
-					shadowPosition = 'topLeft';
+					shadowPosition = 'bottomRight';
 					break;
 				case 'resume':
-					shadowPosition = 'topRight';
-					break;
-				case 'projects':
 					shadowPosition = 'bottomLeft';
 					break;
+				case 'projects':
+					shadowPosition = 'topRight';
+					break;
 				case 'contact':
-					shadowPosition = 'bottomRight';
+					shadowPosition = 'topLeft';
 					break;
 				default:
 					shadowPosition = 'topRight';
