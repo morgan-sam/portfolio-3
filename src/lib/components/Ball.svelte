@@ -85,6 +85,12 @@
 		mix-blend-mode: multiply;
 	}
 
+	.ground-shadow,
+	.ball-shadow,
+	.ball-color {
+		transition: all 0.5s ease-in-out;
+	}
+
 	/* Chrome-specific */
 	/* @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
 		.ball-shadow {
