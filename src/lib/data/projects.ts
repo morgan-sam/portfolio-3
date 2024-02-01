@@ -32,24 +32,6 @@ export const projectInfo = {
 			}
 		]
 	},
-	'train-tracks': {
-		image: { width: 280 },
-		tags: ['React', 'Algorithms', 'BFS'],
-		paragraphs: [
-			'Train Tracks is a puzzle game where the player must connect train tracks to get the train from one side of the map to another. It is built with React and uses a BFS algorithm to find the shortest path.',
-			'No libraries were used for the pathfinding algorithm or the game logic. Likewise all visual effects and custom elements (buttons, etc.) were created from scratch.'
-		],
-		links: [
-			{
-				name: 'Live Demo',
-				url: 'https://morgan-sam.github.io/Train-Tracks-React/'
-			},
-			{
-				name: 'GitHub Repo',
-				url: 'https://github.com/morgan-sam/Train-Tracks-React'
-			}
-		]
-	},
 	'nxcro-hydrogen-store': {
 		image: { width: 460 },
 		tags: ['React', 'Hydrogen', 'Shopify', 'Design'],
@@ -75,6 +57,24 @@ export const projectInfo = {
 			{
 				name: 'GitHub Repo',
 				url: 'https://github.com/morgan-sam/project-management-platform'
+			}
+		]
+	},
+	'train-tracks': {
+		image: { width: 280 },
+		tags: ['React', 'Algorithms', 'BFS'],
+		paragraphs: [
+			'Train Tracks is a puzzle game where the player must connect train tracks to get the train from one side of the map to another. It is built with React and uses a BFS algorithm to find the shortest path.',
+			'No libraries were used for the pathfinding algorithm or the game logic. Likewise all visual effects and custom elements (buttons, etc.) were created from scratch.'
+		],
+		links: [
+			{
+				name: 'Live Demo',
+				url: 'https://morgan-sam.github.io/Train-Tracks-React/'
+			},
+			{
+				name: 'GitHub Repo',
+				url: 'https://github.com/morgan-sam/Train-Tracks-React'
 			}
 		]
 	},

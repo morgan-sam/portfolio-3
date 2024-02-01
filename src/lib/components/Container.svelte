@@ -51,6 +51,9 @@
 		margin: auto;
 		gap: 30px;
 	}
+	.projects.scrolling-container .container-inner {
+		gap: 0;
+	}
 
 	.container,
 	.scrolling-container {
