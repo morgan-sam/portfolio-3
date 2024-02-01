@@ -94,6 +94,7 @@
 					src={`/projects/${projectId}.png`}
 					alt={projectId}
 					width={projectInfo[projectId]['image']?.width}
+					class="w-full"
 				/>
 			</li>
 		{/each}
@@ -110,6 +111,7 @@
 	}
 	img {
 		margin-top: 10px;
+		width: 100%;
 	}
 	h2 {
 		font-size: 1.5rem;
@@ -202,7 +204,6 @@
 			grid-area: 1 / 2 / 3 / 3;
 		}
 		.project-details .details-image {
-			max-width: 400px;
 			width: 100%;
 		}
 	}
