@@ -16,7 +16,7 @@
 <div
 	class="{$$restProps.class || ''} {route}  {scrolling
 		? 'scrolling-container'
-		: 'container slide-up '}"
+		: 'container'} slide-up"
 	style="animation-delay: {delay}ms; gap: {gap}; {style}"
 >
 	<div class="container-inner">
@@ -35,8 +35,6 @@
 		box-sizing: border-box;
 		max-height: 100vh;
 		overflow: hidden;
-		transform: translateY(20px);
-		opacity: 0;
 	}
 
 	.container:last-child {
@@ -52,6 +50,12 @@
 		height: fit-content;
 		margin: auto;
 		gap: 30px;
+	}
+
+	.container,
+	.scrolling-container {
+		transform: translateY(20px);
+		opacity: 0;
 	}
 
 	.slide-up {
