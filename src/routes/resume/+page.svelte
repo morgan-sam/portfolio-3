@@ -6,7 +6,42 @@
 
 <Page>
 	<Container delay={0} gap={'30px'}>
-		<li><h2>Experience</h2></li>
+		<li class="flex !flex-row justify-between w-full">
+			<h2>Experience</h2>
+			<a class="resume-link" href="/fullresume" target="_blank">
+				<h4>Full Resume</h4>
+			</a>
+		</li>
+		<li>
+			<div class="job-title">
+				<h3>Lumber - Fullstack Engineer</h3>
+				<h3>Aug 2023 - Jan 2024</h3>
+			</div>
+			<p>
+				Developed Lumber's Shopify app <i>Atelier</i>, an app for creating sample sale stores for
+				fashion brands.
+			</p>
+		</li>
+		<li>
+			<div class="job-title">
+				<h3>Trena Digital - Shopify Developer</h3>
+				<h3>Jun 2022 - Aug 2023</h3>
+			</div>
+			<p>
+				Developed numerous Shopify stores for clients, including custom themes, apps, and
+				integrations.
+			</p>
+		</li>
+		<li>
+			<div class="job-title">
+				<h3>BlockFi - Frontend Developer</h3>
+				<h3>Jan 2021 - Jun 2022</h3>
+			</div>
+			<p>
+				Developed and maintained the frontend of BlockFi's credit card app, which had 60,000+ active
+				users.
+			</p>
+		</li>
 		<li>
 			<div class="job-title">
 				<h3>Open Source Contributer</h3>
@@ -28,33 +63,7 @@
 				>
 			</div>
 		</li>
-		<li>
-			<div class="job-title">
-				<h3>BlockFi - Frontend Developer</h3>
-				<h3>2021 - 2022</h3>
-			</div>
-			<p>
-				Developed and maintained the frontend of BlockFi's credit card app, which had 60,000+ active
-				users. Worked with the marketing team to implement AB tests and tracking.
-			</p>
-		</li>
-		<li>
-			<div class="job-title">
-				<h3>Freelance Fullstack Developer</h3>
-				<h3>2022 - Present</h3>
-			</div>
-			<p>
-				Worked with clients to create/design/develop websites and applications to meet their needs.
-				Developed NextJS Shopify apps, fullstack MERN/PERN applications, Shopify Hydrogen stores and
-				React frontend applications.
-			</p>
-		</li>
 		<!-- link to full resume -->
-		<li>
-			<a class="resume-link" href="/fullresume" target="_blank">
-				<h4>Full Resume</h4>
-			</a>
-		</li>
 	</Container>
 	<DecorativePanel title={'Resume'} />
 	<Container delay={250} gap={'30px'}>
@@ -102,7 +111,7 @@
 		text-decoration: underline;
 	}
 	h3 {
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 		font-weight: 400;
 	}
 	h4 {
@@ -118,6 +127,14 @@
 	.resume-link {
 		color: rgb(104, 104, 192);
 		text-decoration: underline;
+	}
+	.resume-link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.resume-link h4 {
+		font-size: 1.5rem;
 	}
 	/* max width 1400 */
 	@media (max-width: 1400px) {
