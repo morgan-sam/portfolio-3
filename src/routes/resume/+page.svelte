@@ -8,9 +8,9 @@
 	<Container delay={0} gap={'30px'}>
 		<li class="flex !flex-row justify-between w-full">
 			<h2>Experience</h2>
-			<a class="resume-link" href="/fullresume" target="_blank">
+			<!-- <a class="resume-link" href="/fullresume" target="_blank">
 				<h4>Full Resume</h4>
-			</a>
+			</a> -->
 		</li>
 		<li>
 			<div class="job-title">
