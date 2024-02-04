@@ -70,9 +70,9 @@
 		<li><h2>Client Testimonials</h2></li>
 		<li class="testimonial">
 			<p>
-				"Overall this is literally one of the best results I've seen from a developer - super
-				frictionless experience and you understood the task perfectly. I really appreciate you, keep
-				up the great work! Happy to send you multiple projects moving forward 🙂"
+				"This is literally one of the best results I've seen from a developer - super frictionless
+				experience and you understood the task perfectly. I really appreciate you, keep up the great
+				work! Happy to send you multiple projects moving forward 🙂"
 			</p>
 			<h3>- Nico Aguirre, Trena Digital</h3>
 		</li>
