@@ -45,7 +45,7 @@
 		<li>
 			<div class="job-title">
 				<h3>Open Source Contributer</h3>
-				<h3>2020 - 2021</h3>
+				<h3>Jan 2020 - Jan 2021</h3>
 			</div>
 			<p>Contributed to:</p>
 			<div class="w-full flex justify-between">
