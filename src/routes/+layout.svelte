@@ -11,24 +11,26 @@
 	setContext('lightsOnContext', lightsOn);
 </script>
 
-<!-- <div style="position: absolute; top: 0; left: 50%;">
-	{lightsOn ? 'checked' : 'unchecked'}
-</div> -->
-<div class="page-shadow {route}" style="opacity: {$lightsOn ? 0 : 0.35}; transition: 0.5s;" />
-<Navbar />
-<div class="layout">
+<!-- if route begins with ecom -->
+{#if route.startsWith('ecom')}
 	<slot />
-</div>
-<div class="light-switch-container">
-	<input
-		type="checkbox"
-		class="light-switch-checkbox"
-		on:change={() => lightsOn.set(!$lightsOn)}
-		checked={$lightsOn}
-	/>
-	<div class="light-switch-button" />
-	<div class="light-switch-background" />
-</div>
+{:else}
+	<div class="page-shadow {route}" style="opacity: {$lightsOn ? 0 : 0.35}; transition: 0.5s;" />
+	<Navbar />
+	<div class="layout">
+		<slot />
+	</div>
+	<div class="light-switch-container">
+		<input
+			type="checkbox"
+			class="light-switch-checkbox"
+			on:change={() => lightsOn.set(!$lightsOn)}
+			checked={$lightsOn}
+		/>
+		<div class="light-switch-button" />
+		<div class="light-switch-background" />
+	</div>
+{/if}
 
 <style>
 	.light-switch-container {
