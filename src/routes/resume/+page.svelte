@@ -25,7 +25,7 @@
 		<li>
 			<div class="job-title">
 				<h3>Trena Digital - Shopify Developer</h3>
-				<h3>Jun 2022 - Aug 2023</h3>
+				<h3>Sep 2022 - Aug 2023</h3>
 			</div>
 			<p>
 				Developed numerous Shopify stores for clients, including custom themes, apps, and
@@ -35,7 +35,7 @@
 		<li>
 			<div class="job-title">
 				<h3>BlockFi - Frontend Developer</h3>
-				<h3>Jan 2021 - Jun 2022</h3>
+				<h3>Jan 2021 - Sep 2022</h3>
 			</div>
 			<p>
 				Developed and maintained the frontend of BlockFi's credit card app, which had 60,000+ active
