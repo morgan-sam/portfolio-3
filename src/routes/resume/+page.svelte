@@ -14,6 +14,15 @@
 		</li>
 		<li>
 			<div class="job-title">
+				<h3>GOAT Foods - Lead Developer</h3>
+				<h3>May 2024 - Present</h3>
+			</div>
+			<p>
+				Led team of 3 developers to create the storefronts for 8 separate brands totaling $3M ARR.
+			</p>
+		</li>
+		<li>
+			<div class="job-title">
 				<h3>Lumber - Fullstack Engineer</h3>
 				<h3>Aug 2023 - Jan 2024</h3>
 			</div>
@@ -34,7 +43,7 @@
 		</li>
 		<li>
 			<div class="job-title">
-				<h3>BlockFi - Frontend Developer</h3>
+				<h3>BlockFi - Frontend Engineer</h3>
 				<h3>Jan 2021 - Sep 2022</h3>
 			</div>
 			<p>
